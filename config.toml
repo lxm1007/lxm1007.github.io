@@ -31,8 +31,8 @@ canonifyurls = true
   archive = "archives"
 
 [author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
+  name = "刘孝明"
+  bio = "量力而行 尽力而为"
   job = "Your job title"
   location = "France"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
@@ -48,54 +48,42 @@ canonifyurls = true
 # Menu Configuration
 [[menu.main]]
   weight = 1
-  identifier = "home"
-  name = "Home"
+  identifier = "home-lxm1007"
+  name = "刘孝明"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
   url = "/"
 [[menu.main]]
   weight = 2
-  identifier = "categories"
-  name = "Categories"
+  identifier = "categories-lxm1007"
+  name = "分类"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
   url = "/categories"
 [[menu.main]]
   weight = 3
-  identifier = "tags"
-  name = "Tags"
+  identifier = "tags-lxm1007"
+  name = "标签"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
   url = "/tags"
 [[menu.main]]
   weight = 4
-  identifier = "archives"
-  name = "Archives"
+  identifier = "archives-lxm1007"
+  name = "归档"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
   url = "/archives"
-[[menu.main]]
-  weight = 5
-  identifier = "about"
-  name = "About"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
-  url = "/#about"
 
 [[menu.links]]
   weight = 1
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/kakawait"
+  url = "https://github.com/lxm1007"
 [[menu.links]]
   weight = 2
-  identifier = "stackoverflow"
-  name = "Stack Overflow"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-  url = "https://stackoverflow.com/users/636472/kakawait"
+  identifier = "gitee"
+  name = "Gitee"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-gitlab\"></i>"
+  url = "https://gitee.com/lxm1007"
 
-[[menu.misc]]
-  weight = 1
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-  url = "/index.xml"
 
 [params]
   # Customize date format use to render blog post date, categories and other
