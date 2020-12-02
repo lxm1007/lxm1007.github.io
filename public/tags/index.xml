@@ -1,229 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Hugo tranquilpeak theme</title>
+    <title>Tags on 孝明之家</title>
     <link>https://lxm1007.gitee.io/tags/</link>
-    <description>Recent content in Tags on Hugo tranquilpeak theme</description>
+    <description>Recent content in Tags on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Dec 2020 15:05:49 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Dec 2020 17:18:01 +0800</lastBuildDate>
     
 	<atom:link href="https://lxm1007.gitee.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>hugo</title>
-      <link>https://lxm1007.gitee.io/tags/hugo/</link>
-      <pubDate>Wed, 02 Dec 2020 15:05:49 +0800</pubDate>
+      <title>博客</title>
+      <link>https://lxm1007.gitee.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 02 Dec 2020 17:18:01 +0800</pubDate>
       
-      <guid>https://lxm1007.gitee.io/tags/hugo/</guid>
+      <guid>https://lxm1007.gitee.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>文章</title>
-      <link>https://lxm1007.gitee.io/tags/%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Wed, 02 Dec 2020 15:05:49 +0800</pubDate>
+      <title>感悟</title>
+      <link>https://lxm1007.gitee.io/tags/%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Wed, 02 Dec 2020 17:18:01 +0800</pubDate>
       
-      <guid>https://lxm1007.gitee.io/tags/%E6%96%87%E7%AB%A0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>disqus</title>
-      <link>https://lxm1007.gitee.io/tags/disqus/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/disqus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google analytics</title>
-      <link>https://lxm1007.gitee.io/tags/google-analytics/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/google-analytics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gravatar</title>
-      <link>https://lxm1007.gitee.io/tags/gravatar/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/gravatar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hexo theme</title>
-      <link>https://lxm1007.gitee.io/tags/hexo-theme/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/hexo-theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>responsive</title>
-      <link>https://lxm1007.gitee.io/tags/responsive/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/responsive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html elements</title>
-      <link>https://lxm1007.gitee.io/tags/html-elements/</link>
-      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/html-elements/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>markdown</title>
-      <link>https://lxm1007.gitee.io/tags/markdown/</link>
-      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cover image</title>
-      <link>https://lxm1007.gitee.io/tags/cover-image/</link>
-      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/cover-image/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github theme</title>
-      <link>https://lxm1007.gitee.io/tags/github-theme/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/github-theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>highlight code</title>
-      <link>https://lxm1007.gitee.io/tags/highlight-code/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/highlight-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://lxm1007.gitee.io/tags/test/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag plugins</title>
-      <link>https://lxm1007.gitee.io/tags/tag-plugins/</link>
-      <pubDate>Wed, 29 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/tag-plugins/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>social</title>
-      <link>https://lxm1007.gitee.io/tags/social/</link>
-      <pubDate>Sun, 17 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/social/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tags</title>
-      <link>https://lxm1007.gitee.io/tags/tags/</link>
-      <pubDate>Sat, 16 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/tags/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pagination</title>
-      <link>https://lxm1007.gitee.io/tags/pagination/</link>
-      <pubDate>Fri, 15 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/pagination/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dailymotion</title>
-      <link>https://lxm1007.gitee.io/tags/dailymotion/</link>
-      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/dailymotion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>videos integration</title>
-      <link>https://lxm1007.gitee.io/tags/videos-integration/</link>
-      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/videos-integration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vimeo</title>
-      <link>https://lxm1007.gitee.io/tags/vimeo/</link>
-      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/vimeo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>youtube</title>
-      <link>https://lxm1007.gitee.io/tags/youtube/</link>
-      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/youtube/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>chinese</title>
-      <link>https://lxm1007.gitee.io/tags/chinese/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/chinese/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>image gallery</title>
-      <link>https://lxm1007.gitee.io/tags/image-gallery/</link>
-      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/image-gallery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>japanese</title>
-      <link>https://lxm1007.gitee.io/tags/japanese/</link>
-      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/japanese/</guid>
+      <guid>https://lxm1007.gitee.io/tags/%E6%84%9F%E6%82%9F/</guid>
       <description></description>
     </item>
     
