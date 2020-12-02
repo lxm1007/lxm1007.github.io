@@ -49,7 +49,7 @@ canonifyurls = true
 [[menu.main]]
   weight = 1
   identifier = "home-lxm1007"
-  name = "刘孝明"
+  name = "首页"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
   url = "/"
 [[menu.main]]
@@ -72,13 +72,13 @@ canonifyurls = true
   url = "/archives"
 
 [[menu.links]]
-  weight = 1
+  weight = 5
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/lxm1007"
 [[menu.links]]
-  weight = 2
+  weight = 6
   identifier = "gitee"
   name = "Gitee"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-gitlab\"></i>"
@@ -174,21 +174,6 @@ canonifyurls = true
   # Comment and uncomment to enable or disable sharing options
   # If you wanna add a sharing option, read user documentation :
   # Tranquilpeak configuration > Theme configuration > sharing-options
-  [[params.sharingOptions]]
-    name = "Facebook"
-    icon = "fa-facebook-official"
-    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
-
-  [[params.sharingOptions]]
-    name = "Twitter"
-    icon = "fa-twitter"
-    url = "https://twitter.com/intent/tweet?text=%s"
-
-  [[params.sharingOptions]]
-    name = "Google+"
-    icon = "fa-google-plus"
-    url = "https://plus.google.com/share?url=%s"
-
   [params.header.rightLink]
     class = ""
     icon = ""
