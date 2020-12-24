@@ -1,0 +1,217 @@
+Start building sites … 
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "page": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "page": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "page": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "home": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "section": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/12/24 17:59:33 found no layout file for "HTML" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+
+                   | EN-US  
+-------------------+--------
+  Pages            |    17  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    13  
+  Processed images |     0  
+  Aliases          |     0  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 123 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:80/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+WARN 2020/12/24 18:03:22 found no layout file for "HTML" for kind "home": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+Building sites … 
+                   | EN-US  
+-------------------+--------
+  Pages            |    38  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    17  
+  Processed images |     0  
+  Aliases          |    14  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 205 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static,themes}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:80/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+Building sites … 
+                   | EN-US  
+-------------------+--------
+  Pages            |    38  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    17  
+  Processed images |     0  
+  Aliases          |    14  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 181 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static,themes}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:80/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+
+Change of config file detected, rebuilding site.
+2020-12-24 19:10:34.711 +0800
+Rebuilt in 90 ms
+Building sites … 
+                   | EN-US  
+-------------------+--------
+  Pages            |    38  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    17  
+  Processed images |     0  
+  Aliases          |    14  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 205 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static,themes}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:80/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+Building sites … 
+                   | EN-US  
+-------------------+--------
+  Pages            |    38  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    17  
+  Processed images |     0  
+  Aliases          |    14  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 240 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static,themes}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:80/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+port 80 already in use, attempting to use an available port
+Building sites … 
+                   | EN-US  
+-------------------+--------
+  Pages            |    38  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    17  
+  Processed images |     0  
+  Aliases          |    14  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 165 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static,themes}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:38758/ (bind address www.liuxiaoming.top)
+Press Ctrl+C to stop
+ERROR 2020/12/24 19:13:58 Error: listen tcp 47.99.217.68:38758: bind: cannot assign requested address
+port 80 already in use, attempting to use an available port
+Building sites … 
+                   | EN-US  
+-------------------+--------
+  Pages            |    38  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    17  
+  Processed images |     0  
+  Aliases          |    14  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 210 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static,themes}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:45673/ (bind address www.liuxiaoming.top)
+Press Ctrl+C to stop
+ERROR 2020/12/24 19:14:09 Error: listen tcp 47.99.217.68:45673: bind: cannot assign requested address
+port 80 already in use, attempting to use an available port
+Building sites … 
+                   | EN-US  
+-------------------+--------
+  Pages            |    38  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    17  
+  Processed images |     0  
+  Aliases          |    14  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 196 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static,themes}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:45699/ (bind address 47.99.217.68)
+Press Ctrl+C to stop
+ERROR 2020/12/24 19:14:45 Error: listen tcp 47.99.217.68:45699: bind: cannot assign requested address
+Building sites … 
+                   | EN-US  
+-------------------+--------
+  Pages            |    38  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    17  
+  Processed images |     0  
+  Aliases          |    14  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Built in 178 ms
+Watching for changes in /home/lxm/git_pro/lxm1007/{archetypes,content,static,themes}
+Watching for config changes in /home/lxm/git_pro/lxm1007/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://www.liuxiaoming.top:80/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+
+Change detected, rebuilding site.
+2020-12-24 19:30:52.719 +0800
+Template changed "/home/lxm/git_pro/lxm1007/themes/tranquilpeak/layouts/partials/footer.html": WRITE
+Total in 33 ms

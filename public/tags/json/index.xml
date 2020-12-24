@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>json on 孝明之家</title>
-    <link>https://lxm1007.gitee.io/tags/json/</link>
+    <link>http://liuxiaoming.top/tags/json/</link>
     <description>Recent content in json on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Dec 2020 17:28:25 +0800</lastBuildDate>
     
-	<atom:link href="https://lxm1007.gitee.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://liuxiaoming.top/tags/json/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Postgresql的json使用</title>
-      <link>https://lxm1007.gitee.io/2020/12/postgresql%E7%9A%84json%E4%BD%BF%E7%94%A8/</link>
+      <link>http://liuxiaoming.top/2020/12/postgresql%E7%9A%84json%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Sun, 06 Dec 2020 17:28:25 +0800</pubDate>
       
-      <guid>https://lxm1007.gitee.io/2020/12/postgresql%E7%9A%84json%E4%BD%BF%E7%94%A8/</guid>
+      <guid>http://liuxiaoming.top/2020/12/postgresql%E7%9A%84json%E4%BD%BF%E7%94%A8/</guid>
       <description></description>
     </item>
     
