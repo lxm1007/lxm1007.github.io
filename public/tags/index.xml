@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Dec 2020 17:28:25 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 10 Dec 2020 19:26:13 +0800</lastBuildDate>
     
 	<atom:link href="https://lxm1007.gitee.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>registry</title>
+      <link>https://lxm1007.gitee.io/tags/registry/</link>
+      <pubDate>Thu, 10 Dec 2020 19:26:13 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/registry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>registry-api</title>
+      <link>https://lxm1007.gitee.io/tags/registry-api/</link>
+      <pubDate>Thu, 10 Dec 2020 19:26:13 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/registry-api/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>json</title>
