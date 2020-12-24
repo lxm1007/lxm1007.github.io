@@ -215,3 +215,7 @@ Change detected, rebuilding site.
 2020-12-24 19:30:52.719 +0800
 Template changed "/home/lxm/git_pro/lxm1007/themes/tranquilpeak/layouts/partials/footer.html": WRITE
 Total in 33 ms
+
+Change of config file detected, rebuilding site.
+2020-12-24 19:35:15.719 +0800
+Rebuilt in 99 ms
