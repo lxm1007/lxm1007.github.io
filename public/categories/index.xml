@@ -6,10 +6,28 @@
     <description>Recent content in Categories on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Dec 2020 19:26:13 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Dec 2020 21:07:31 +0800</lastBuildDate>
     
 	<atom:link href="https://lxm1007.gitee.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ssh</title>
+      <link>https://lxm1007.gitee.io/categories/ssh/</link>
+      <pubDate>Tue, 29 Dec 2020 21:07:31 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/categories/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh隧道</title>
+      <link>https://lxm1007.gitee.io/categories/ssh%E9%9A%A7%E9%81%93/</link>
+      <pubDate>Tue, 29 Dec 2020 21:07:31 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/categories/ssh%E9%9A%A7%E9%81%93/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>docker</title>
