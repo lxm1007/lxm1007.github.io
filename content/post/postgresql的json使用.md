@@ -9,7 +9,7 @@ tags:
 - postgresql
 keywords:
 - 数据库
-thumbnailImage: /img/r2e391.png
+thumbnailImage: /img/r2e391.jpg
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
 coverImage: /img/2020.jpg

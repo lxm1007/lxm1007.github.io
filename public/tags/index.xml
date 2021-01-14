@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Dec 2020 21:07:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jan 2021 11:36:19 +0800</lastBuildDate>
     
 	<atom:link href="https://lxm1007.gitee.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>k8s</title>
+      <link>https://lxm1007.gitee.io/tags/k8s/</link>
+      <pubDate>Thu, 14 Jan 2021 11:36:19 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>安装教程</title>
+      <link>https://lxm1007.gitee.io/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Thu, 14 Jan 2021 11:36:19 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ssh</title>
@@ -26,24 +44,6 @@
       <pubDate>Tue, 29 Dec 2020 21:07:31 +0800</pubDate>
       
       <guid>https://lxm1007.gitee.io/tags/%E9%9A%A7%E9%81%93/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>registry</title>
-      <link>https://lxm1007.gitee.io/tags/registry/</link>
-      <pubDate>Thu, 10 Dec 2020 19:26:13 +0800</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/registry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>registry-api</title>
-      <link>https://lxm1007.gitee.io/tags/registry-api/</link>
-      <pubDate>Thu, 10 Dec 2020 19:26:13 +0800</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/registry-api/</guid>
       <description></description>
     </item>
     
