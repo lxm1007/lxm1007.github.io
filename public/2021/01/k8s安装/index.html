@@ -308,6 +308,28 @@
 <blockquote>
 <p>访问对应的nodePort端口  如果遇到证书不信任的问题没法继续 直接键盘输入 <code>thisisunsafe</code></p>
 </blockquote>
+<h4 id="heading"></h4>
+<h1 id="metric-server的安装">metric-server的安装</h1>
+<blockquote>
+<p>使用阿里云创建镜像 <a href="https://github.com/kubernetes-sigs/metrics-server">https://github.com/kubernetes-sigs/metrics-server</a></p>
+</blockquote>
+<blockquote>
+<p><code>kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.4.1/components.yaml</code> 修改配置文件</p>
+</blockquote>
+<blockquote>
+<pre><code>spec:
+</code></pre>
+</blockquote>
+<pre><code>  containers:
+  - args:
+    - --cert-dir=/tmp
+    - --secure-port=4443
+    - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+    - --kubelet-use-node-status-port
+    - --kubelet-insecure-tls # 需要添加的非受信 否则创建pod异常
+    image: k8s.gcr.io/metrics-server/metrics-server:v0.4.1
+    imagePullPolicy: IfNotPresent
+</code></pre>
               
             </div>
           </div>

@@ -57,3 +57,24 @@ coverMeta: out
 > `kubectl -n kube-system describe $(kubectl -n kube-system get secret -n kube-system -o name | grep namespace) | grep token | awk '{print $2}' | sed 1,2d ` 直接获取 
 
 > 访问对应的nodePort端口  如果遇到证书不信任的问题没法继续 直接键盘输入 `thisisunsafe`
+
+
+#### 
+
+# metric-server的安装  
+
+> 使用阿里云创建镜像 https://github.com/kubernetes-sigs/metrics-server 
+
+> `kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.4.1/components.yaml` 修改配置文件
+
+>     spec:
+      containers:
+      - args:
+        - --cert-dir=/tmp
+        - --secure-port=4443
+        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+        - --kubelet-use-node-status-port
+        - --kubelet-insecure-tls # 需要添加的非受信 否则创建pod异常
+        image: k8s.gcr.io/metrics-server/metrics-server:v0.4.1
+        imagePullPolicy: IfNotPresent
+
