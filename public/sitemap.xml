@@ -4,17 +4,47 @@
   
   <url>
     <loc>https://lxm1007.gitee.io/categories/</loc>
-    <lastmod>2021-01-14T11:36:19+08:00</lastmod>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://lxm1007.gitee.io/tags/k8s/</loc>
-    <lastmod>2021-01-14T11:36:19+08:00</lastmod>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://lxm1007.gitee.io/categories/k8s/</loc>
-    <lastmod>2021-01-14T11:36:19+08:00</lastmod>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lxm1007.gitee.io/2021/01/k8s%E7%9A%84pod%E9%A9%B1%E9%80%90%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lxm1007.gitee.io/tags/pod/</loc>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lxm1007.gitee.io/categories/pod/</loc>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lxm1007.gitee.io/post/</loc>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lxm1007.gitee.io/tags/</loc>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lxm1007.gitee.io/</loc>
+    <lastmod>2021-01-28T15:39:04+08:00</lastmod>
   </url>
   
   <url>
@@ -24,21 +54,6 @@
   
   <url>
     <loc>https://lxm1007.gitee.io/categories/k8s%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2021-01-14T11:36:19+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lxm1007.gitee.io/post/</loc>
-    <lastmod>2021-01-14T11:36:19+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lxm1007.gitee.io/tags/</loc>
-    <lastmod>2021-01-14T11:36:19+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lxm1007.gitee.io/</loc>
     <lastmod>2021-01-14T11:36:19+08:00</lastmod>
   </url>
   

@@ -6,7 +6,7 @@
     <description>Recent content in Categories on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Jan 2021 11:36:19 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2021 15:39:04 +0800</lastBuildDate>
     
 	<atom:link href="https://lxm1007.gitee.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>k8s</title>
       <link>https://lxm1007.gitee.io/categories/k8s/</link>
-      <pubDate>Thu, 14 Jan 2021 11:36:19 +0800</pubDate>
+      <pubDate>Thu, 28 Jan 2021 15:39:04 +0800</pubDate>
       
       <guid>https://lxm1007.gitee.io/categories/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pod</title>
+      <link>https://lxm1007.gitee.io/categories/pod/</link>
+      <pubDate>Thu, 28 Jan 2021 15:39:04 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/categories/pod/</guid>
       <description></description>
     </item>
     
