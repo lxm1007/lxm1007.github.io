@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Jan 2021 15:39:04 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2021 16:22:37 +0800</lastBuildDate>
     
 	<atom:link href="https://lxm1007.gitee.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ssh存储当前仓库身份</title>
+      <link>https://lxm1007.gitee.io/2021/01/ssh%E5%AD%98%E5%82%A8%E5%BD%93%E5%89%8D%E4%BB%93%E5%BA%93%E8%BA%AB%E4%BB%BD/</link>
+      <pubDate>Thu, 28 Jan 2021 16:22:37 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/2021/01/ssh%E5%AD%98%E5%82%A8%E5%BD%93%E5%89%8D%E4%BB%93%E5%BA%93%E8%BA%AB%E4%BB%BD/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>K8s的pod驱逐问题</title>
@@ -17,12 +26,7 @@
       <pubDate>Thu, 28 Jan 2021 15:39:04 +0800</pubDate>
       
       <guid>https://lxm1007.gitee.io/2021/01/k8s%E7%9A%84pod%E9%A9%B1%E9%80%90%E9%97%AE%E9%A2%98/</guid>
-      <description>关于项目中k8s的几个知识点和对应的操作 k8s的污点和容忍  污点（Taints）是拒绝pods的操作，而容忍（Tolerations）是配合着污点使用，允许调度的操作
- 关于调度和驱逐的问题  至少有 1 个未被忽略的 taint 且 effect 是 NoSchedule 时，则 k8s 不会将该 pod 调度到这个 node 上
-  但至少有 1 个未被忽略的 taint 且 effect 是 PreferNoSchedule 时，则 k8s 将尝试不把该 pod 调度到这个 node 上【注意该场景是在上一基础上不满足才会执行】
-  至少有 1 个未被忽略的 taint 且 effect 是 NoExecute 时，则 k8s 会立即将该 pod 从该 node 上驱逐（如果已经在该 node 上运行），或着不会将该 pod 调度到这个 node 上（如果还没在这个 node 上运行）
-  NoExecute这个Taint效果对节点上正在运行的Pod有以下影响:
- ◎　没有设置Toleration的Pod会被立刻驱逐。 ◎　配置了对应Toleration的Pod，如果没有为tolerationSeconds赋值，则会一直留在这一节点中。 ◎　配置了对应Toleration的Pod且指定了tolerationSeconds值，则会在指定时间后驱逐。 ◎　Kubernetes从1.</description>
+      <description></description>
     </item>
     
     <item>
