@@ -12,7 +12,7 @@ keywords:
 thumbnailImage: /img/ymgvlk.jpg
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
-coverImage: /img/011zk3.jpg.jpg
+coverImage: /img/011zk3.jpg
 metaAlignment: center
 coverMeta: out
 ---
