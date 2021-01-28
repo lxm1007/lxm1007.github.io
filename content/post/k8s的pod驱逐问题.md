@@ -38,7 +38,9 @@ coverMeta: out
 ◎　没有设置Toleration的Pod会被立刻驱逐。
 ◎　配置了对应Toleration的Pod，如果没有为tolerationSeconds赋值，则会一直留在这一节点中。
 ◎　配置了对应Toleration的Pod且指定了tolerationSeconds值，则会在指定时间后驱逐。
-◎　Kubernetes从1.6版本开始引入一个Alpha版本的功能，即把节点故障标记为Taint（目前只针对node unreachable及node not ready，相应的NodeCondition "Ready"的值分别为Unknown和False）。激活TaintBasedEvictions功能后（在--feature-gates参数中加入TaintBasedEvictions=true），NodeController会自动为Node设置Taint，而在状态为Ready的Node上，之前设置过的普通驱逐逻辑将会被禁用。注意，在节点故障的情况下，为了保持现存的Pod驱逐的限速（rate-limiting）设置，系统将会以限速的模式逐步给Node设置Taint，这就能避免在一些特定情况下（比如Master暂时失联）大量的Pod被驱逐。这一功能兼容tolerationSeconds,允许Pod定义节点故障时持续多久才被逐出```
+◎　Kubernetes从1.6版本开始引入一个Alpha版本的功能，即把节点故障标记为Taint（目前只针对node unreachable及node not ready，相应的NodeCondition "Ready"的值分别为Unknown和False）。激活TaintBasedEvictions功能后（在--feature-gates参数中加入TaintBasedEvictions=true），NodeController会自动为Node设置Taint，而在状态为Ready的Node上，之前设置过的普通驱逐逻辑将会被禁用。注意，在节点故障的情况下，为了保持现存的Pod驱逐的限速（rate-limiting）设置，系统将会以限速的模式逐步给Node设置Taint，这就能避免在一些特定情况下（比如Master暂时失联）大量的Pod被驱逐。这一功能兼容tolerationSeconds,允许Pod定义节点故障时持续多久才被逐出
+总结：想直接驱逐就不加容忍，想定时驱逐就加容忍指定时间，不想驱逐就加容忍不指定是时间
+```
 
 ## k8s中的一些问题
 
