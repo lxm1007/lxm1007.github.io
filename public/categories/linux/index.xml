@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on 孝明之家</title>
+    <link>https://lxm1007.gitee.io/categories/linux/</link>
+    <description>Recent content in linux on 孝明之家</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jan 2021 17:52:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://lxm1007.gitee.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shell命令总结</title>
+      <link>https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 28 Jan 2021 17:52:53 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
