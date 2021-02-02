@@ -40,7 +40,7 @@ coverMeta: out
 
 > 下载需要的镜像  `kubeadm config images pull --config=config.yaml`
 
-> `kubeadm config images list` 镜像列表
+> `kubeadm config images list --kubernetes-version=v1.18.7` 镜像列表 --kubernetes-version 指定版本
 
 > `kubeadm init --config=config.yaml` 初始化集群
 
