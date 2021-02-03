@@ -78,3 +78,10 @@ coverMeta: out
         image: k8s.gcr.io/metrics-server/metrics-server:v0.4.1
         imagePullPolicy: IfNotPresent
 
+# k8s主机通过service名访问service配置
+
+>在pod内可以通过service名访问对应的服，这是因为在创建pod的时候coredns将需要的配置添加到/etc/resolv.conf 
+
+>类似``` search default.svc.cluster.local svc.cluster.local cluster.local ``` 其中  search 域中 default.svc.cluster.local 格式为【命名空间】.svc.【k8s安装时指定的域】
+
+>可以在k8s初始化时指定 ``` --service-dns-domain ``` 默认为 cluster.local 当多集群时需要进行配置，该信息会存储到对应的configmap中
