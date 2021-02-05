@@ -7,40 +7,42 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="刘孝明">
-<meta name="keywords" content="shell">
+<meta name="keywords" content="go">
 <meta name="description" content="">
 
 
 <meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell命令总结">
-<meta name="twitter:title" content="Shell命令总结">
-<meta property="og:url" content="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">
-<meta property="twitter:url" content="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">
+<meta property="og:title" content="Go_web编程学习笔记">
+<meta name="twitter:title" content="Go_web编程学习笔记">
+<meta property="og:url" content="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<meta property="twitter:url" content="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 <meta property="og:site_name" content="孝明之家">
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2021-01-28T17:52:53">
+    <meta property="article:published_time" content="2021-02-05T20:22:34">
   
   
-    <meta property="article:modified_time" content="2021-01-28T17:52:53">
+    <meta property="article:modified_time" content="2021-02-05T20:22:34">
   
-  
-  
-    
-      <meta property="article:section" content="shell">
-    
-      <meta property="article:section" content="linux">
-    
   
   
     
-      <meta property="article:tag" content="shell">
+      <meta property="article:section" content="go">
     
-      <meta property="article:tag" content="nginx">
+      <meta property="article:section" content="学习笔记">
+    
+  
+  
+    
+      <meta property="article:tag" content="go">
+    
+      <meta property="article:tag" content="web">
+    
+      <meta property="article:tag" content="笔记">
     
   
 
@@ -53,12 +55,12 @@
 
 
 
-  <meta property="og:image" content="https://lxm1007.gitee.io/img/ymgvlk.jpg">
-  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/ymgvlk.jpg">
+  <meta property="og:image" content="https://lxm1007.gitee.io/img/5wkvz8.png">
+  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/5wkvz8.png">
 
 
-  <meta property="og:image" content="https://lxm1007.gitee.io/img/011zk3.jpg">
-  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/011zk3.jpg">
+  <meta property="og:image" content="https://lxm1007.gitee.io/img/oxxw29.jpg">
+  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/oxxw29.jpg">
 
 
 
@@ -67,14 +69,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
 
 
-    <title>Shell命令总结</title>
+    <title>Go_web编程学习笔记</title>
 
     <link rel="icon" href="https://lxm1007.gitee.io/img/favicon.ico">
     
 
     
 
-    <link rel="canonical" href="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">
+    <link rel="canonical" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -206,7 +208,7 @@
   <div class="post-header-cover
               text-center
               "
-       style="background-image:url('/img/011zk3.jpg')"
+       style="background-image:url('/img/oxxw29.jpg')"
        data-behavior="4">
     
   </div>
@@ -222,15 +224,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Shell命令总结
+      Go_web编程学习笔记
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-01-28T17:52:53&#43;08:00">
+      <time itemprop="datePublished" datetime="2021-02-05T20:22:34&#43;08:00">
         
-  January 28, 2021
+  February 5, 2021
 
       </time>
     
@@ -239,9 +241,9 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://lxm1007.gitee.io/categories/shell">shell</a>, 
+      <a class="category-link" href="https://lxm1007.gitee.io/categories/go">go</a>, 
     
-      <a class="category-link" href="https://lxm1007.gitee.io/categories/linux">linux</a>
+      <a class="category-link" href="https://lxm1007.gitee.io/categories/%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0">学习笔记</a>
     
   
 
@@ -251,17 +253,24 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="不常见但好用shell命令总结">不常见但好用shell命令总结</h1>
-<h2 id="xargs-配合管道符使用"><code>xargs</code> 配合管道符使用</h2>
+              <h1 id="go-web编程学习笔记">go web编程学习笔记</h1>
+<h2 id="书籍github地址httpsgithubcomsausheonggwp">【书籍github地址：https://github.com/sausheong/gwp】</h2>
+<h1 id="关于http的url-encode">关于http的url encode</h1>
 <blockquote>
-<p><code>kubectl get pod -n a5bcbee0-d55f-11ea-806a-0242ac110004 |grep Terminating | awk '{print $1}'| xargs kubectl delete  pod -n a5bcbee0-d55f-11ea-806a-0242ac110004 --grace-period=0 --force </code> 删除某个命令空间下所有停止中的pod</p>
+<p>所有保留字符都要进行url编码：把保留字符转化为该字符的ascii编码中对应的十六进制对应的字节值，然后在该字节前面加%，例如空格的asscii码对应的十六进制为20 则urlencode后为%20</p>
 </blockquote>
-<h2 id="ps-aux--pgrep--获取进程号"><code>ps aux | pgrep []</code> 获取进程号</h2>
+<h1 id="简单的hello-world">简单的hello world</h1>
 <blockquote>
-<p>获取进程号时，使用<code>ps aux | grep kubelet | awk '{print $2} 通常会多一个没有用的或者多个进程'</code> 可以使用<code>ps aux | pgrep kubelet</code>替换 这样只有一个并且是对的</p>
+<p><img src="https://lxm1007.gitee.io/img/demo.png" alt="demo"></p>
 </blockquote>
-<h2 id="ctrlr-然后输入指定命令可以直接查看历史命令"><code>CTRL+R</code> 然后输入指定命令可以直接查看历史命令</h2>
-<h2 id="netstat--rn-或-route--n-查看本地路由表"><code>netstat -rn </code>或 <code>route -n</code> 查看本地路由表</h2>
+<h1 id="复杂的应用">复杂的应用</h1>
+<blockquote>
+</blockquote>
+<pre><code>mux := http.NewServeMux() //创建多路复用器
+files := http.FileServer(http.Dir(&quot;/public&quot;))//创建一个可以为指定目录服务的文件处理器
+mux.Handle(&quot;/static/&quot;, http.StripPrefix(&quot;/static/&quot;, files)) //以static开头的文件 去掉/static/ 到public 下寻找对应文件 ```
+
+</code></pre>
               
             </div>
           </div>
@@ -273,9 +282,11 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/shell/">shell</a>
+  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/go/">go</a>
 
-  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/nginx/">nginx</a>
+  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/web/">web</a>
+
+  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
 
                   </div>
                 
@@ -288,7 +299,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-tooltip="Go_web编程学习笔记">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -296,7 +307,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/01/ssh%E5%AD%98%E5%82%A8%E5%BD%93%E5%89%8D%E4%BB%93%E5%BA%93%E8%BA%AB%E4%BB%BD/" data-tooltip="Ssh存储当前仓库身份">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" data-tooltip="Shell命令总结">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -357,7 +368,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-tooltip="Go_web编程学习笔记">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -365,7 +376,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/01/ssh%E5%AD%98%E5%82%A8%E5%BD%93%E5%89%8D%E4%BB%93%E5%BA%93%E8%BA%AB%E4%BB%BD/" data-tooltip="Ssh存储当前仓库身份">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" data-tooltip="Shell命令总结">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -493,9 +504,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/lxm1007.gitee.io\/2021\/01\/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93\/';
+          this.page.url = 'https:\/\/lxm1007.gitee.io\/2021\/02\/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/';
           
-            this.page.identifier = '\/2021\/01\/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93\/'
+            this.page.identifier = '\/2021\/02\/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/'
           
         };
         (function() {
