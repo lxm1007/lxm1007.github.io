@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="刘孝明">
-<meta name="keywords" content="go">
+<meta name="keywords" content="go, 编发">
 <meta name="description" content="">
 
 
 <meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Go_web编程学习笔记">
-<meta name="twitter:title" content="Go_web编程学习笔记">
-<meta property="og:url" content="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-<meta property="twitter:url" content="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<meta property="og:title" content="Go_并发编程笔记">
+<meta name="twitter:title" content="Go_并发编程笔记">
+<meta property="og:url" content="https://lxm1007.gitee.io/2021/02/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+<meta property="twitter:url" content="https://lxm1007.gitee.io/2021/02/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">
 <meta property="og:site_name" content="孝明之家">
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2021-02-05T20:22:34">
+    <meta property="article:published_time" content="2021-02-08T11:15:50">
   
   
-    <meta property="article:modified_time" content="2021-02-05T20:22:34">
+    <meta property="article:modified_time" content="2021-02-08T11:15:50">
   
   
   
@@ -40,9 +40,7 @@
     
       <meta property="article:tag" content="go">
     
-      <meta property="article:tag" content="web">
-    
-      <meta property="article:tag" content="笔记">
+      <meta property="article:tag" content="并发编程">
     
   
 
@@ -55,12 +53,12 @@
 
 
 
-  <meta property="og:image" content="https://lxm1007.gitee.io/img/5wkvz8.png">
-  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/5wkvz8.png">
+  <meta property="og:image" content="https://lxm1007.gitee.io/img/xlzo5o.jpg">
+  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/xlzo5o.jpg">
 
 
-  <meta property="og:image" content="https://lxm1007.gitee.io/img/oxxw29.jpg">
-  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/oxxw29.jpg">
+  <meta property="og:image" content="https://lxm1007.gitee.io/img/4gj39d.jpg">
+  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/4gj39d.jpg">
 
 
 
@@ -69,14 +67,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
 
 
-    <title>Go_web编程学习笔记</title>
+    <title>Go_并发编程笔记</title>
 
     <link rel="icon" href="https://lxm1007.gitee.io/img/favicon.ico">
     
 
     
 
-    <link rel="canonical" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link rel="canonical" href="https://lxm1007.gitee.io/2021/02/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -208,7 +206,7 @@
   <div class="post-header-cover
               text-center
               "
-       style="background-image:url('/img/oxxw29.jpg')"
+       style="background-image:url('/img/4gj39d.jpg')"
        data-behavior="4">
     
   </div>
@@ -224,15 +222,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Go_web编程学习笔记
+      Go_并发编程笔记
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-02-05T20:22:34&#43;08:00">
+      <time itemprop="datePublished" datetime="2021-02-08T11:15:50&#43;08:00">
         
-  February 5, 2021
+  February 8, 2021
 
       </time>
     
@@ -253,24 +251,161 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="go-web编程学习笔记">go web编程学习笔记</h1>
-<h2 id="书籍github地址httpsgithubcomsausheonggwp">【书籍github地址：https://github.com/sausheong/gwp】</h2>
-<h1 id="关于http的url-encode">关于http的url encode</h1>
+              <h1 id="go-并发编程学习笔记">go 并发编程学习笔记</h1>
+<h2 id="go命令">go命令</h2>
 <blockquote>
-<p>所有保留字符都要进行url编码：把保留字符转化为该字符的ascii编码中对应的十六进制对应的字节值，然后在该字节前面加%，例如空格的asscii码对应的十六进制为20 则urlencode后为%20</p>
+<p><code>build</code> 命令源码编译成可执行文件</p>
 </blockquote>
-<h1 id="简单的hello-world">简单的hello world</h1>
 <blockquote>
-<p><img src="https://lxm1007.gitee.io/img/demo.png" alt="demo"></p>
+<p><code>clean</code> 清理因执行go命令而遗留下来的临时目录和文件</p>
 </blockquote>
-<h1 id="复杂的应用">复杂的应用</h1>
+<blockquote>
+<p><code>doc</code> 用于显示go语言代码包和程序实体的文档</p>
+</blockquote>
+<blockquote>
+<p><code>env </code> 打印go语言相关环境变量</p>
+</blockquote>
+<blockquote>
+<p><code> fix</code> 用于修正指定的代码包的源码文件中包含的过时语法和代码调用</p>
+</blockquote>
+<blockquote>
+<p><code>fmt</code> 用于格式化指定代码包的go源码文件 实际是通过gofmt命令实现的功能</p>
+</blockquote>
+<blockquote>
+<p><code> generate</code> 用于识别代码中go:generate注释，并执行其携带的命令</p>
+</blockquote>
+<blockquote>
+<p><code>get</code>用于下载编译并安装指定的代码包和其依赖包</p>
+</blockquote>
+<blockquote>
+<p><code>install</code> 用于安装指定的代码包和其依赖包</p>
+</blockquote>
+<blockquote>
+<p><code> list</code> 用于显示指定代码包的信息</p>
+</blockquote>
+<blockquote>
+<p><code> run</code> 用于编译并运行指定的命令源码文件</p>
+</blockquote>
+<blockquote>
+<p><code> test</code> 用于测试指定的代码包，前提是代码包包含测试文件</p>
+</blockquote>
+<blockquote>
+<p><code> tool</code> 用于运行go语言的特殊工具 其中包括 addr2line 、api、asm、buildid、cgo、compile、cover、dist、doc、fix、link、nm、objdump、oldlink、pack、pprof、test2json、trace、vet 其中pprof可以分析cpu、内存和程序阻塞概要文件，trace 读取程序踪迹文件并以图形化展示</p>
+</blockquote>
+<blockquote>
+<p><code> vet</code> 用于检查指定代码包的go语言源码，并报告可疑代码问题</p>
+</blockquote>
+<blockquote>
+<p><code> version</code> 用于显示当前的go语言版本</p>
+</blockquote>
+<blockquote>
+<p><code>-a</code>用于强制编译所有设计的go语言的代码包</p>
+</blockquote>
+<blockquote>
+<p><code> -n</code> 只打印命令而不执行</p>
+</blockquote>
+<blockquote>
+<p><code> -race</code> 检测指定go语言程序中存在的数据竞争问题</p>
+</blockquote>
+<blockquote>
+<p><code>-v</code>用于检测命令执行中设计的代码包</p>
+</blockquote>
+<blockquote>
+<p><code> -work</code> 打印命执行时生成的临时目录的名字，且命令执行后不删除他们</p>
+</blockquote>
+<blockquote>
+<p><code> -x</code> 使命令打印执行过程中用到的所有命令，并执行他们</p>
+</blockquote>
+<h2 id="一个小demo">一个小demo</h2>
 <blockquote>
 </blockquote>
-<pre><code>mux := http.NewServeMux() //创建多路复用器
-files := http.FileServer(http.Dir(&quot;/public&quot;))//创建一个可以为指定目录服务的文件处理器
-mux.Handle(&quot;/static/&quot;, http.StripPrefix(&quot;/static/&quot;, files)) //以static开头的文件 去掉/static/ 到public 下寻找对应文件 ```
+<pre><code class="language-package" data-lang="package">import (
+	&quot;bufio&quot;
+	&quot;fmt&quot;
+	&quot;os&quot;
+)
+func main()  {
 
-</code></pre>
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println(&quot;请输入您的名字&quot;)
+	readString, err := reader.ReadString('\n')
+	//line, _, err := reader.ReadLine()
+	if err != nil {
+		fmt.Println(&quot;输入错误&quot;)
+	}
+	//fmt.Println(&quot;你好,&quot;,string(line))
+	fmt.Println(&quot;你好,&quot;,readString[:len(readString)-1])
+}
+</code></pre><h2 id="go的内建函数名称">go的内建函数名称</h2>
+<blockquote>
+<p>append、cap、close、complex、copy、delete、imag、len、make、new、panic、print、real、recover</p>
+</blockquote>
+<h2 id="go的关键字">go的关键字</h2>
+<h3 id="程序声明">程序声明</h3>
+<blockquote>
+<p>import、package</p>
+</blockquote>
+<h3 id="实体声明和定义">实体声明和定义</h3>
+<blockquote>
+<p>chan、const、func、interface、map、struct、type、var</p>
+</blockquote>
+<h3 id="流程控制">流程控制</h3>
+<blockquote>
+<p>go、select、break、case、continue、default、else、fallthrough、for、goto、if、range、return、swith</p>
+</blockquote>
+<h2 id="表达式">表达式</h2>
+<blockquote>
+<p><code>v1.(I1)</code> 类型断言</p>
+</blockquote>
+<blockquote>
+<p>注意： 失败的断言会引起panic 所有通常赋值两个变量即<code>var i1,ok = v1.(I1)</code></p>
+</blockquote>
+<h2 id="switch-类型语句">switch 类型语句</h2>
+<blockquote>
+</blockquote>
+<pre><code>switch v.(type) 
+
+</code></pre><blockquote>
+<p>该操作不能使用fallthrough</p>
+</blockquote>
+<h2 id="for-语句的省略问题">for 语句的省略问题</h2>
+<blockquote>
+<p>当初始化语句和后置语句都省略，或者全部都省略的时候可以不写；</p>
+</blockquote>
+<h2 id="range-迭代时注意事项">range 迭代时注意事项</h2>
+<blockquote>
+<p>数组、切片、字符串进行迭代时，当只有一个变量时，此时是索引</p>
+</blockquote>
+<blockquote>
+<p>迭代空数组、空字符串、nil的切片、nil的字典时，并不会执行for中的代码</p>
+</blockquote>
+<blockquote>
+<p>迭代nil的chan时会使当前流程阻塞在for语句上</p>
+</blockquote>
+<h2 id="关于flag的注意事项">关于flag的注意事项</h2>
+<blockquote>
+<p>代码如下</p>
+</blockquote>
+<pre><code>	var str string
+	flag.StringVar(&amp;str, &quot;str&quot;, &quot;123&quot;, &quot;输入字符串&quot;)
+	flag.Parse()//一定要指定该语句 否则赋值将不会成功
+	fmt.Println(str)
+</code></pre><h2 id="并发编程重要将不断完善">并发编程【重要，将不断完善】</h2>
+<blockquote>
+<p>进程的状态转换</p>
+</blockquote>
+<p><img src="https://lxm1007.gitee.io/img/status.png" alt="demo"></p>
+<blockquote>
+<p>内核态和用户态 ：cpu一办只工作再用户态，当需要进行系统调用（访问内核的接口），内核会将cpu由用户态调整到内核态，这时候的cpu就有权限访问内核空间，在执行完对应的函数时，内核将cpu从内核态切换成用户态</p>
+</blockquote>
+<p><img src="https://lxm1007.gitee.io/img/thread.png" alt="demo"></p>
+<blockquote>
+<p>线程的状态</p>
+</blockquote>
+<p><img src="https://lxm1007.gitee.io/img/thread_model.png" alt="demo"></p>
+<blockquote>
+<p>线程模型</p>
+</blockquote>
               
             </div>
           </div>
@@ -284,9 +419,7 @@ mux.Handle(&quot;/static/&quot;, http.StripPrefix(&quot;/static/&quot;, files)) 
                     
   <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/go/">go</a>
 
-  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/web/">web</a>
-
-  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">并发编程</a>
 
                   </div>
                 
@@ -299,7 +432,7 @@ mux.Handle(&quot;/static/&quot;, http.StripPrefix(&quot;/static/&quot;, files)) 
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" data-tooltip="Go_并发编程笔记">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -307,7 +440,7 @@ mux.Handle(&quot;/static/&quot;, http.StripPrefix(&quot;/static/&quot;, files)) 
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" data-tooltip="Shell命令总结">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-tooltip="Go_web编程学习笔记">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -368,7 +501,7 @@ mux.Handle(&quot;/static/&quot;, http.StripPrefix(&quot;/static/&quot;, files)) 
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" data-tooltip="Go_并发编程笔记">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -376,7 +509,7 @@ mux.Handle(&quot;/static/&quot;, http.StripPrefix(&quot;/static/&quot;, files)) 
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" data-tooltip="Shell命令总结">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-tooltip="Go_web编程学习笔记">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -504,9 +637,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/lxm1007.gitee.io\/2021\/02\/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/';
+          this.page.url = 'https:\/\/lxm1007.gitee.io\/2021\/02\/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0\/';
           
-            this.page.identifier = '\/2021\/02\/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/'
+            this.page.identifier = '\/2021\/02\/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0\/'
           
         };
         (function() {
