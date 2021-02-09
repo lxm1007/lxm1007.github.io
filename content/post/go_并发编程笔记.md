@@ -149,9 +149,77 @@ switch v.(type)
 
 > 内核态和用户态 ：cpu一办只工作再用户态，当需要进行系统调用（访问内核的接口），内核会将cpu由用户态调整到内核态，这时候的cpu就有权限访问内核空间，在执行完对应的函数时，内核将cpu从内核态切换成用户态
 
+> 线程的状态如下
 ![demo](/img/thread.png)
 
-> 线程的状态
-
+>线程模型如下
 ![demo](/img/thread_model.png)
->线程模型
+
+>处理并发的建议
+![demo](/img/suggest.png)
+
+
+## go中的M、P、G
+
+>M：一个M代表一个内核线程，或者工作线程
+
+>P:一个P代表一个GO代码段所必须的资源(上下文)
+
+>G:go代码段 代表一个goroutine
+
+## runtime和goroutine包
+
+>```runtime.GOMAXPROCS()``` 设置P的最大数 但是超过256则也只能使用256
+
+>```runtime.Goexit()``` 终止当前goroutine，其他goroutine不受影响，但是终止前会指定当前doroutine未执行的defer
+
+>```runtime.Gosched()``` 暂停当前的goroutine，等调度器再次将当前goroutine唤醒
+
+>```runtime.NumGoroutine()``` 打印当前非dead的G个数，该值永远大于等于1
+
+>```runtime.LockOSThread()``` 将当前的goroutine和M绑定在一起
+
+>```runtime.UnlockOSThread()``` 将goroutine和M解绑，单独执行绑定和解绑不会产生其他不好的结果
+
+>```debug.SetMaxStack()``` 设置单个goroutine所能申请的栈大小 32和64位系统设置默认值为250m和1G
+
+> ```debug.SetMaxThreads()``` 设置内核线程的数量（也可以认为是M的数量） 默认值是10000
+
+## 关于 channel
+
+### 建议
+>建议使用传递信号的channel都使用struct{}空结构体，因为空结构体变量不占用内存空间，所有空结构体的内存地址相同
+
+> 环形队列
+
+![demo](/img/queue-chan.png)
+
+### 发送和接受通道的记忆方式
+
+> 可以使用顺序记忆法 out<-chan<-in 方式记忆通道类型 chan<- 则为发送通道，理解为从右往chan输入  <-chan 则为接受 即根据chan和<-的方向记忆
+
+### 关于发送和接受通道的使用 
+
+><-chan 接收通道对于定义来说毫无意义，想象下定义一个只能接收的通道，又不能发送，那接收就没有意义，其实这种通道对于方法或者函数参数的定义很有意义，一个只能接收的通道的参数标识这该参数只能接收数据，虽然可以传递一个既可以发送也可以接收的通道，但是参数的定义类型标识着通道的试用方法。
+
+## 非缓冲通道
+
+![demo](/img/happen_before.png)
+
+> 对于非缓冲通道的使用【定时器】
+```
+	timer := time.NewTimer(3 * time.Second)
+	c := <-timer.C
+	fmt.Println("%v",c)
+```
+如果没有到定时器的时间，则线程一直会阻塞着
+
+如果想直接返回接收通道 可以使用after函数
+```
+	after := time.After(4 * time.Second)
+	d:=<-after
+	fmt.Println("%v",d)
+```
+
+## api请求超时
+![demo](/img/api.png)
