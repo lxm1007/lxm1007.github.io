@@ -34,7 +34,7 @@ coverMeta: out
 # 复杂的应用 
 
 > 
-```
+```go
 mux := http.NewServeMux() //创建多路复用器
 files := http.FileServer(http.Dir("/public"))//创建一个可以为指定目录服务的文件处理器
 mux.Handle("/static/", http.StripPrefix("/static/", files)) //以static开头的文件 去掉/static/ 到public 下寻找对应文件 ```

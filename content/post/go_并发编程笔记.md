@@ -67,7 +67,8 @@ coverMeta: out
 ## 一个小demo
 
 > 
-```package main
+```go
+package main
 import (
 	"bufio"
 	"fmt"
@@ -114,7 +115,7 @@ func main()  {
 ## switch 类型语句
 
 > 
-``` 
+```go 
 switch v.(type) 
 
 ```
@@ -134,7 +135,7 @@ switch v.(type)
 
 ## 关于flag的注意事项
 > 代码如下
-```
+```go
 	var str string
 	flag.StringVar(&str, "str", "123", "输入字符串")
 	flag.Parse()//一定要指定该语句 否则赋值将不会成功
@@ -207,7 +208,7 @@ switch v.(type)
 ![demo](/img/happen_before.png)
 
 > 对于非缓冲通道的使用【定时器】
-```
+```go
 	timer := time.NewTimer(3 * time.Second)
 	c := <-timer.C
 	fmt.Println("%v",c)
@@ -215,7 +216,7 @@ switch v.(type)
 如果没有到定时器的时间，则线程一直会阻塞着
 
 如果想直接返回接收通道 可以使用after函数
-```
+```go
 	after := time.After(4 * time.Second)
 	d:=<-after
 	fmt.Println("%v",d)
