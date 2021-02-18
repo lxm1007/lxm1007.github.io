@@ -75,7 +75,15 @@
     
 
     <link rel="canonical" href="https://lxm1007.gitee.io/2021/02/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">
-
+      <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/monokai.min.css" rel="stylesheet">
+      
+      <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+      
+      
+      <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+      
+      <script>hljs.initHighlightingOnLoad();</script>
+      
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
@@ -319,24 +327,25 @@
 <h2 id="一个小demo">一个小demo</h2>
 <blockquote>
 </blockquote>
-<pre><code class="language-package" data-lang="package">import (
-	&quot;bufio&quot;
-	&quot;fmt&quot;
-	&quot;os&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;bufio&#34;</span>
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;os&#34;</span>
 )
-func main()  {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
 
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Println(&quot;请输入您的名字&quot;)
-	readString, err := reader.ReadString('\n')
-	//line, _, err := reader.ReadLine()
-	if err != nil {
-		fmt.Println(&quot;输入错误&quot;)
+	<span style="color:#a6e22e">reader</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdin</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;请输入您的名字&#34;</span>)
+	<span style="color:#a6e22e">readString</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">ReadString</span>(<span style="color:#e6db74">&#39;\n&#39;</span>)
+	<span style="color:#75715e">//line, _, err := reader.ReadLine()
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;输入错误&#34;</span>)
 	}
-	//fmt.Println(&quot;你好,&quot;,string(line))
-	fmt.Println(&quot;你好,&quot;,readString[:len(readString)-1])
+	<span style="color:#75715e">//fmt.Println(&#34;你好,&#34;,string(line))
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;你好,&#34;</span>,<span style="color:#a6e22e">readString</span>[:len(<span style="color:#a6e22e">readString</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
 }
-</code></pre><h2 id="go的内建函数名称">go的内建函数名称</h2>
+</code></pre></div><h2 id="go的内建函数名称">go的内建函数名称</h2>
 <blockquote>
 <p>append、cap、close、complex、copy、delete、imag、len、make、new、panic、print、real、recover</p>
 </blockquote>
@@ -363,9 +372,9 @@ func main()  {
 <h2 id="switch-类型语句">switch 类型语句</h2>
 <blockquote>
 </blockquote>
-<pre><code>switch v.(type) 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.(<span style="color:#66d9ef">type</span>) 
 
-</code></pre><blockquote>
+</code></pre></div><blockquote>
 <p>该操作不能使用fallthrough</p>
 </blockquote>
 <h2 id="for-语句的省略问题">for 语句的省略问题</h2>
@@ -386,11 +395,11 @@ func main()  {
 <blockquote>
 <p>代码如下</p>
 </blockquote>
-<pre><code>	var str string
-	flag.StringVar(&amp;str, &quot;str&quot;, &quot;123&quot;, &quot;输入字符串&quot;)
-	flag.Parse()//一定要指定该语句 否则赋值将不会成功
-	fmt.Println(str)
-</code></pre><h2 id="并发编程重要将不断完善">并发编程【重要，将不断完善】</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#66d9ef">string</span>
+	<span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">StringVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">str</span>, <span style="color:#e6db74">&#34;str&#34;</span>, <span style="color:#e6db74">&#34;123&#34;</span>, <span style="color:#e6db74">&#34;输入字符串&#34;</span>)
+	<span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()<span style="color:#75715e">//一定要指定该语句 否则赋值将不会成功
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">str</span>)
+</code></pre></div><h2 id="并发编程重要将不断完善">并发编程【重要，将不断完善】</h2>
 <blockquote>
 <p>进程的状态转换</p>
 </blockquote>
@@ -467,15 +476,15 @@ func main()  {
 <blockquote>
 <p>对于非缓冲通道的使用【定时器】</p>
 </blockquote>
-<pre><code>	timer := time.NewTimer(3 * time.Second)
-	c := &lt;-timer.C
-	fmt.Println(&quot;%v&quot;,c)
-</code></pre><p>如果没有到定时器的时间，则线程一直会阻塞着</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">	<span style="color:#a6e22e">timer</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">NewTimer</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">timer</span>.<span style="color:#a6e22e">C</span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;%v&#34;</span>,<span style="color:#a6e22e">c</span>)
+</code></pre></div><p>如果没有到定时器的时间，则线程一直会阻塞着</p>
 <p>如果想直接返回接收通道 可以使用after函数</p>
-<pre><code>	after := time.After(4 * time.Second)
-	d:=&lt;-after
-	fmt.Println(&quot;%v&quot;,d)
-</code></pre><h2 id="api请求超时">api请求超时</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">	<span style="color:#a6e22e">after</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">After</span>(<span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+	<span style="color:#a6e22e">d</span><span style="color:#f92672">:=&lt;-</span><span style="color:#a6e22e">after</span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;%v&#34;</span>,<span style="color:#a6e22e">d</span>)
+</code></pre></div><h2 id="api请求超时">api请求超时</h2>
 <p><img src="https://lxm1007.gitee.io/img/api.png" alt="demo"></p>
               
             </div>

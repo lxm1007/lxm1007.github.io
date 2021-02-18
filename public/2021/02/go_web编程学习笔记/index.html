@@ -77,7 +77,15 @@
     
 
     <link rel="canonical" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
+      <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/monokai.min.css" rel="stylesheet">
+      
+      <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+      
+      
+      <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+      
+      <script>hljs.initHighlightingOnLoad();</script>
+      
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
@@ -266,11 +274,11 @@
 <h1 id="复杂的应用">复杂的应用</h1>
 <blockquote>
 </blockquote>
-<pre><code>mux := http.NewServeMux() //创建多路复用器
-files := http.FileServer(http.Dir(&quot;/public&quot;))//创建一个可以为指定目录服务的文件处理器
-mux.Handle(&quot;/static/&quot;, http.StripPrefix(&quot;/static/&quot;, files)) //以static开头的文件 去掉/static/ 到public 下寻找对应文件 ```
-
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">mux</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewServeMux</span>() <span style="color:#75715e">//创建多路复用器
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">files</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">FileServer</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;/public&#34;</span>))<span style="color:#75715e">//创建一个可以为指定目录服务的文件处理器
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">mux</span>.<span style="color:#a6e22e">Handle</span>(<span style="color:#e6db74">&#34;/static/&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StripPrefix</span>(<span style="color:#e6db74">&#34;/static/&#34;</span>, <span style="color:#a6e22e">files</span>)) <span style="color:#75715e">//以static开头的文件 去掉/static/ 到public 下寻找对应文件 ```
+</span><span style="color:#75715e"></span>
+</code></pre></div>
               
             </div>
           </div>
