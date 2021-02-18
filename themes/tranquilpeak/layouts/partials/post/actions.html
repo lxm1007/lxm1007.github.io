@@ -47,37 +47,5 @@
           {{ end }}
         </ul>
       </nav>
-    <ul class="post-actions post-action-share" >
-      {{ if (not (eq .Params.showSocial false)) }}
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        {{ range .Site.Params.sharingOptions }}
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="{{ printf .url $.Permalink }}">
-              <i class="fa {{ .icon }}"></i>
-            </a>
-          </li>
-        {{ end }}
-      {{ end }}
-      {{ if and (not (eq .Params.comments false)) .Site.DisqusShortname }}
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      {{ end }}
-      <li class="post-action">
-        {{ if findRE "<!--\\s*[t|T][o|O][c|C]\\s*-->" .Content }}
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
-        {{ else }}
-          <a class="post-action-btn btn btn--default" href="#">
-        {{ end }}
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
-    </ul>
   {{ end }}
 </div>
