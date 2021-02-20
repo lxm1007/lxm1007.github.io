@@ -6,10 +6,64 @@
     <description>Recent content in Tags on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Feb 2021 11:15:50 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 10:11:01 +0800</lastBuildDate>
     
 	<atom:link href="https://lxm1007.gitee.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>redis</title>
+      <link>https://lxm1007.gitee.io/tags/redis/</link>
+      <pubDate>Sat, 20 Feb 2021 10:11:01 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习笔记</title>
+      <link>https://lxm1007.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 20 Feb 2021 10:11:01 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>curl</title>
+      <link>https://lxm1007.gitee.io/tags/curl/</link>
+      <pubDate>Sat, 20 Feb 2021 10:10:53 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/curl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://lxm1007.gitee.io/tags/shell/</link>
+      <pubDate>Sat, 20 Feb 2021 10:10:53 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>https://lxm1007.gitee.io/tags/nginx/</link>
+      <pubDate>Fri, 19 Feb 2021 19:40:57 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>配置</title>
+      <link>https://lxm1007.gitee.io/tags/%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 19 Feb 2021 19:40:57 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/%E9%85%8D%E7%BD%AE/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>go</title>
@@ -35,33 +89,6 @@
       <pubDate>Fri, 05 Feb 2021 20:22:34 +0800</pubDate>
       
       <guid>https://lxm1007.gitee.io/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>笔记</title>
-      <link>https://lxm1007.gitee.io/tags/%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Fri, 05 Feb 2021 20:22:34 +0800</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/%E7%AC%94%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nginx</title>
-      <link>https://lxm1007.gitee.io/tags/nginx/</link>
-      <pubDate>Thu, 28 Jan 2021 17:52:53 +0800</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell</title>
-      <link>https://lxm1007.gitee.io/tags/shell/</link>
-      <pubDate>Thu, 28 Jan 2021 17:52:53 +0800</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/shell/</guid>
       <description></description>
     </item>
     

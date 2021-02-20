@@ -7,9 +7,10 @@ categories:
 tags:
 - go
 - 并发编程
+- 学习笔记
 keywords:
 - go
-- 编发
+- 并发
 thumbnailImage: /img/xlzo5o.jpg
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
@@ -44,7 +45,7 @@ coverMeta: out
 
 > ``` run``` 用于编译并运行指定的命令源码文件
 
-> ``` test``` 用于测试指定的代码包，前提是代码包包含测试文件
+> ``` test``` 用于测试指定的代码包，前提是代码包包含测试文件 -v -cover 显示代码覆盖率 -short 调过指定部分（需要代码判断）-parallel 3 并行运行3个测试用例 -bench 后面要接一个正则 可以使用.
 
 > ``` tool``` 用于运行go语言的特殊工具 其中包括 addr2line 、api、asm、buildid、cgo、compile、cover、dist、doc、fix、link、nm、objdump、oldlink、pack、pprof、test2json、trace、vet 其中pprof可以分析cpu、内存和程序阻塞概要文件，trace 读取程序踪迹文件并以图形化展示
 
@@ -221,6 +222,8 @@ switch v.(type)
 	d:=<-after
 	fmt.Println("%v",d)
 ```
+
+>对于非缓冲通道在打印时可能存在先出现消费后出现生产的问题，其中可能的原因是线程先调度到打印消费，鉴别的关键是看是不是先消费完等通道空闲才有生产
 
 ## api请求超时
 ![demo](/img/api.png)

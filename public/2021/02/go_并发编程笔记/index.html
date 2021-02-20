@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="刘孝明">
-<meta name="keywords" content="go, 编发">
+<meta name="keywords" content="go, 并发">
 <meta name="description" content="">
 
 
@@ -41,6 +41,8 @@
       <meta property="article:tag" content="go">
     
       <meta property="article:tag" content="并发编程">
+    
+      <meta property="article:tag" content="学习笔记">
     
   
 
@@ -295,7 +297,7 @@
 <p><code> run</code> 用于编译并运行指定的命令源码文件</p>
 </blockquote>
 <blockquote>
-<p><code> test</code> 用于测试指定的代码包，前提是代码包包含测试文件</p>
+<p><code> test</code> 用于测试指定的代码包，前提是代码包包含测试文件 -v -cover 显示代码覆盖率 -short 调过指定部分（需要代码判断）-parallel 3 并行运行3个测试用例 -bench 后面要接一个正则 可以使用.</p>
 </blockquote>
 <blockquote>
 <p><code> tool</code> 用于运行go语言的特殊工具 其中包括 addr2line 、api、asm、buildid、cgo、compile、cover、dist、doc、fix、link、nm、objdump、oldlink、pack、pprof、test2json、trace、vet 其中pprof可以分析cpu、内存和程序阻塞概要文件，trace 读取程序踪迹文件并以图形化展示</p>
@@ -484,7 +486,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">	<span style="color:#a6e22e">after</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">After</span>(<span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
 	<span style="color:#a6e22e">d</span><span style="color:#f92672">:=&lt;-</span><span style="color:#a6e22e">after</span>
 	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;%v&#34;</span>,<span style="color:#a6e22e">d</span>)
-</code></pre></div><h2 id="api请求超时">api请求超时</h2>
+</code></pre></div><blockquote>
+<p>对于非缓冲通道在打印时可能存在先出现消费后出现生产的问题，其中可能的原因是线程先调度到打印消费，鉴别的关键是看是不是先消费完等通道空闲才有生产</p>
+</blockquote>
+<h2 id="api请求超时">api请求超时</h2>
 <p><img src="https://lxm1007.gitee.io/img/api.png" alt="demo"></p>
               
             </div>
@@ -501,6 +506,8 @@
 
   <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">并发编程</a>
 
+  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+
                   </div>
                 
               
@@ -512,7 +519,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/nginx%E6%80%BB%E7%BB%93/" data-tooltip="Nginx总结">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -552,7 +559,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/nginx%E6%80%BB%E7%BB%93/" data-tooltip="Nginx总结">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
