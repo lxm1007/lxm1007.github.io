@@ -32,3 +32,5 @@ coverMeta: out
 ## ```CTRL+R``` 然后输入指定命令可以直接查看历史命令
 
 ## ```netstat -rn ```或 ```route -n``` 查看本地路由表
+
+## ``` host -a|-v 123 ```查看域名搜索顺序，可以配合着/etc/resolv.conf search域
