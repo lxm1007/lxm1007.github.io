@@ -1,5 +1,5 @@
 ---
-title: "K8s安装"
+title: "K8s总结"
 date: 2021-01-14T11:36:19+08:00
 categories:
 - k8s
@@ -85,3 +85,43 @@ coverMeta: out
 >类似``` search default.svc.cluster.local svc.cluster.local cluster.local ``` 其中  search 域中 default.svc.cluster.local 格式为【命名空间】.svc.【k8s安装时指定的域】
 
 >可以在k8s初始化时指定 ``` --service-dns-domain ``` 默认为 cluster.local 当多集群时需要进行配置，该信息会存储到对应的configmap中
+
+# k8s中使用技巧
+## 端口转发
+> 使用```kubectl port-forward nginx-598b589c46-ffn25 8090:80```将pod的容器端口80映射到宿主机8090
+## 显示pod指定标签 
+> ```kubectl get pod  -L pod-template-hash -Listio.io/rev -Lservice.istio.io/canonical-name``` 通过-L指定标签将在查询的时候将该列的值显示出来，kubectl get 可以接多个-L。同时也可以使用逗号分隔所要显示的标签 ```kubectl get pod  -L pod-template-hash,istio.io/rev,service.istio.io/canonical-name```
+
+## 显示所有标签
+> ```kubectl get pod  --show-labels ```
+
+## 根据标签过滤要显示的pod 
+> ```kubectl get pod  -l service.istio.io/canonical-name=details``` 只显示标签带有指定key和value的pod，```kubectl get pod  -l service.istio.io/canonical-name``` 则显示标签带有该key的pod
+## 删除命名空间下所有资源
+> 在删除命名空间时 将删除命名空间下所有的对象资源
+
+> ```kubectl delete all --all -n lxm-test``` 该操作也会删除对应的命名空间下所有的资源【尽量删除】
+
+## 日志打印前一个容器
+
+> ```kubectl logs lee-nginx-779d8f74b8-wf9jw -n logging  --previous``` --previous 查看前一个容器的日志，不存在是会报错
+
+## 容器退出码
+> 容器退出码为128+x，当退出码为137时为128+9，则为强制退出，这时候容器不是重启，应该是重新创建
+## 标签选择器(operator)
+> In:label 的值必须与其中的一个指定的values匹配
+
+>NotIn: label值与任何指定的values都不匹配
+
+>Exists: pod要包含一个指定的标签名，value无所谓，同时values值不应该设置
+
+>DoesNotExist: pod不能包含指定的标签，values不应该指定
+
+>matchExpressions中指定的规则要都满足才可以，matchExpressions和matchLabels都指定时，要求两者对应的所有规则都满足才可以
+
+## job
+> job类型的pod不能使用默认的重启策略 Always,需要设置为OnFailure或者Never
+
+> activeDeadlineSeconds：设置job可以运行的最大时间。backoffLimit：设置失败的重试次数
+
+> startingDeadlineSeconds: 在计划任务开始时间后执行【最迟】

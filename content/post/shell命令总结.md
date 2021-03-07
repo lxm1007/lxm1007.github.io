@@ -34,3 +34,7 @@ coverMeta: out
 ## ```netstat -rn ```或 ```route -n``` 查看本地路由表
 
 ## ``` host -a|-v 123 ```查看域名搜索顺序，可以配合着/etc/resolv.conf search域
+
+> host -a 【要搜索的域名】
+
+> 如果类型 123或者abc这种没有.并且也不是以.结尾的 那么在查询的时候会直接在
