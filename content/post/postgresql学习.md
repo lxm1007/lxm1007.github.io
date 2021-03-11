@@ -103,5 +103,50 @@ coverMeta: out
 
 >在连接数据库的时候 使用-E 参数可以将\开头的命令对应的sql也打印出来，同时可以使用```\set ECHO_HIDDEN on ```和```\set ECHO_HIDDEN off ```隐藏或者显示命令对应的sql
 
+## 配置参数
+> 所有的配置参数都在pg_settings中，其中enumval是取值，unit是单位，short_desc和extra_desc是描述，context表示的是参数的类型
+
+>参数类型，internal:只读参数，程序初始化的时候写死的。postmaster：改变这些参数需要重启postgresql实例。sighup：在postgresql.conf配置的参数，修改这些不需要重启实例，只需要向postmaster发送sighup信号，在master接收到信号之后会向他的子进程发送对应的信号，使新的参数在所有的进程中都生效。backend：在postgresql.conf中，修改这些配置不需要重启服务器，只需要发送sighup信号，但是这些修改在对修改后新建的连接有效，对修改前的连接无效。superuser:只有超级用户在当前的session有效，向postmaster发送sighup也只会影响修改后的连接。user：和superuser唯一的区别就是这个普通用户都能修改
+
+## 访问控制
+> postgresql中那些ip可以访问是在pg_hba.conf中配置的
+
+>第一个字段：local、host、hostssl、hostnossl中的提个
+
+>第二个数据库：all代表全部，replication允许流复制链接
+
+>第三个用户名称：all则为所有用户
+
+>第四个为ip：可以访问的ip
+
+>第五个为验证方法：trust、reject、md5、ident、password、gss、sspi、krb5、ldap、radius、cert、pam 但一般只有前几个用的多
+
+>第六个为认证选项
+
+## 取消运行的sql
+> pg_cancel_backend(pid)取消一个正在执行的sql
+
+>pg_terminate_backend(pid) cancel只是添加了取消标志，在无法取消时可以使用这个
+
+## explain
+> cost=后面的两个值分别为启动成本[返回第一条数据的成本]和返回所有数据的成本
+
+## 系统字段
+> oid:行对象标识符
+
+>tableoid: 包含本行的表的iod
+
+>xmin:插入该行版本的事务id
+
+>xmax：删除此行时的事务id，当插入的时候此字段为0，不为0则可能是删除该行的事务还没有提交
+
+>cmin:事务内部插入类操作的命令id
+
+>cmax:事务内部删除类操作的命令id
+
+>ctid：一个行版本在它所处表内的物理位置
+
+
+
 
  
