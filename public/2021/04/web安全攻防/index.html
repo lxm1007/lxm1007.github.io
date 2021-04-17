@@ -7,40 +7,40 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="刘孝明">
-<meta name="keywords" content="shell">
+<meta name="keywords" content="安全攻防">
 <meta name="description" content="">
 
 
 <meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell命令总结">
-<meta name="twitter:title" content="Shell命令总结">
-<meta property="og:url" content="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">
-<meta property="twitter:url" content="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">
+<meta property="og:title" content="Web安全攻防">
+<meta name="twitter:title" content="Web安全攻防">
+<meta property="og:url" content="https://lxm1007.gitee.io/2021/04/web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2/">
+<meta property="twitter:url" content="https://lxm1007.gitee.io/2021/04/web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2/">
 <meta property="og:site_name" content="孝明之家">
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2021-01-28T17:52:53">
+    <meta property="article:published_time" content="2021-04-17T09:08:21">
   
   
-    <meta property="article:modified_time" content="2021-01-28T17:52:53">
+    <meta property="article:modified_time" content="2021-04-17T09:08:21">
   
-  
-  
-    
-      <meta property="article:section" content="shell">
-    
-      <meta property="article:section" content="linux">
-    
   
   
     
-      <meta property="article:tag" content="shell">
+      <meta property="article:section" content="web安全">
     
-      <meta property="article:tag" content="nginx">
+      <meta property="article:section" content="漏洞分析">
+    
+  
+  
+    
+      <meta property="article:tag" content="安全攻防">
+    
+      <meta property="article:tag" content="漏洞">
     
   
 
@@ -53,12 +53,12 @@
 
 
 
-  <meta property="og:image" content="https://lxm1007.gitee.io/img/ymgvlk.jpg">
-  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/ymgvlk.jpg">
+  <meta property="og:image" content="https://lxm1007.gitee.io/img/daf57.jpg">
+  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/daf57.jpg">
 
 
-  <meta property="og:image" content="https://lxm1007.gitee.io/img/011zk3.jpg">
-  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/011zk3.jpg">
+  <meta property="og:image" content="https://lxm1007.gitee.io/img/ea581.jpg">
+  <meta property="twitter:image" content="https://lxm1007.gitee.io/img/ea581.jpg">
 
 
 
@@ -67,14 +67,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/0a3c905fbe8fffbcf3de9afd490b877f?s=640">
 
 
-    <title>Shell命令总结</title>
+    <title>Web安全攻防</title>
 
     <link rel="icon" href="https://lxm1007.gitee.io/img/favicon.ico">
     
 
     
 
-    <link rel="canonical" href="https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">
+    <link rel="canonical" href="https://lxm1007.gitee.io/2021/04/web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2/">
       <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/monokai.min.css" rel="stylesheet">
       
       <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -214,7 +214,7 @@
   <div class="post-header-cover
               text-center
               "
-       style="background-image:url('/img/011zk3.jpg')"
+       style="background-image:url('/img/ea581.jpg')"
        data-behavior="4">
     
   </div>
@@ -230,15 +230,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Shell命令总结
+      Web安全攻防
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-01-28T17:52:53&#43;08:00">
+      <time itemprop="datePublished" datetime="2021-04-17T09:08:21&#43;08:00">
         
-  January 28, 2021
+  April 17, 2021
 
       </time>
     
@@ -247,9 +247,9 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://lxm1007.gitee.io/categories/shell">shell</a>, 
+      <a class="category-link" href="https://lxm1007.gitee.io/categories/web%e5%ae%89%e5%85%a8">web安全</a>, 
     
-      <a class="category-link" href="https://lxm1007.gitee.io/categories/linux">linux</a>
+      <a class="category-link" href="https://lxm1007.gitee.io/categories/%e6%bc%8f%e6%b4%9e%e5%88%86%e6%9e%90">漏洞分析</a>
     
   
 
@@ -259,25 +259,54 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="不常见但好用shell命令总结">不常见但好用shell命令总结</h1>
-<h2 id="xargs-配合管道符使用"><code>xargs</code> 配合管道符使用</h2>
+              <h1 id="查找域名及其子域名的">查找域名及其子域名的</h1>
+<h2 id="crtshhttpcrtsh"><a href="http://crt.sh">crt.sh</a></h2>
+<h2 id="知名端口">知名端口</h2>
 <blockquote>
-<p><code>kubectl get pod -n a5bcbee0-d55f-11ea-806a-0242ac110004 |grep Terminating | awk '{print $1}'| xargs kubectl delete  pod -n a5bcbee0-d55f-11ea-806a-0242ac110004 --grace-period=0 --force </code> 删除某个命令空间下所有停止中的pod</p>
-</blockquote>
-<h2 id="ps-aux--pgrep--获取进程号"><code>ps aux | pgrep []</code> 获取进程号</h2>
-<blockquote>
-<p>获取进程号时，使用<code>ps aux | grep kubelet | awk '{print $2} 通常会多一个没有用的或者多个进程'</code> 可以使用<code>ps aux | pgrep kubelet</code>替换 这样只有一个并且是对的</p>
-</blockquote>
-<h2 id="ctrlr-然后输入指定命令可以直接查看历史命令"><code>CTRL+R</code> 然后输入指定命令可以直接查看历史命令</h2>
-<h2 id="netstat--rn-或-route--n-查看本地路由表"><code>netstat -rn </code>或 <code>route -n</code> 查看本地路由表</h2>
-<h2 id="-host--a-v-123-查看域名搜索顺序可以配合着etcresolvconf-search域"><code>host -a|-v 123</code>查看域名搜索顺序，可以配合着/etc/resolv.conf search域</h2>
-<blockquote>
-<p>host -a 【要搜索的域名】</p>
+<p>21/22/69 ftp/tftp</p>
 </blockquote>
 <blockquote>
-<p>如果类型 123或者abc这种没有.并且也不是以.结尾的 那么在查询的时候会直接在dns进行查找</p>
+<p>2049 nfs</p>
 </blockquote>
-<h2 id="使用ls--lah-procpidexe-查看详细的进程所在位置">使用<code>ls -lah /proc/[pid]/exe</code> 查看详细的进程所在位置</h2>
+<blockquote>
+<p>139 samba</p>
+</blockquote>
+<blockquote>
+<p>389 ldap</p>
+</blockquote>
+<blockquote>
+<p>23 telnet</p>
+</blockquote>
+<blockquote>
+<p>3389 rdp</p>
+</blockquote>
+<blockquote>
+<p>5900 vnc</p>
+</blockquote>
+<blockquote>
+<p>5632 pyantwhere</p>
+</blockquote>
+<blockquote>
+<p>25 smtp</p>
+</blockquote>
+<blockquote>
+<p>110 pop3</p>
+</blockquote>
+<blockquote>
+<p>143 imap</p>
+</blockquote>
+<blockquote>
+<p>53 dns</p>
+</blockquote>
+<blockquote>
+<p>67/68 dhcp</p>
+</blockquote>
+<blockquote>
+<p>161 snmp</p>
+</blockquote>
+<blockquote>
+<p>873 rsync</p>
+</blockquote>
               
             </div>
           </div>
@@ -289,9 +318,9 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/shell/">shell</a>
+  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2/">安全攻防</a>
 
-  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/nginx/">nginx</a>
+  <a class="tag tag--primary tag--small" href="https://lxm1007.gitee.io/tags/%E6%BC%8F%E6%B4%9E/">漏洞</a>
 
                   </div>
                 
@@ -304,7 +333,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-tooltip="Go_web编程学习笔记">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -312,7 +341,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/01/ssh%E5%AD%98%E5%82%A8%E5%BD%93%E5%89%8D%E4%BB%93%E5%BA%93%E8%BA%AB%E4%BB%BD/" data-tooltip="Ssh存储当前仓库身份">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/03/%E5%AF%86%E7%A0%81%E5%92%8C%E8%A7%A3%E5%AF%86/" data-tooltip="密码和解密">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -344,7 +373,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-tooltip="Go_web编程学习笔记">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -352,7 +381,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/01/ssh%E5%AD%98%E5%82%A8%E5%BD%93%E5%89%8D%E4%BB%93%E5%BA%93%E8%BA%AB%E4%BB%BD/" data-tooltip="Ssh存储当前仓库身份">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.gitee.io/2021/03/%E5%AF%86%E7%A0%81%E5%92%8C%E8%A7%A3%E5%AF%86/" data-tooltip="密码和解密">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -456,9 +485,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/lxm1007.gitee.io\/2021\/01\/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93\/';
+          this.page.url = 'https:\/\/lxm1007.gitee.io\/2021\/04\/web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2\/';
           
-            this.page.identifier = '\/2021\/01\/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93\/'
+            this.page.identifier = '\/2021\/04\/web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2\/'
           
         };
         (function() {
