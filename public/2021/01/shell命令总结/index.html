@@ -278,6 +278,22 @@
 <p>如果类型 123或者abc这种没有.并且也不是以.结尾的 那么在查询的时候会直接在dns进行查找</p>
 </blockquote>
 <h2 id="使用ls--lah-procpidexe-查看详细的进程所在位置">使用<code>ls -lah /proc/[pid]/exe</code> 查看详细的进程所在位置</h2>
+<h2 id="解决磁盘无法挂载的问题">解决磁盘无法挂载的问题</h2>
+<blockquote>
+<p>1、查看日志 <code> dmesg 【对应磁盘】</code></p>
+</blockquote>
+<blockquote>
+<p>2、发现是uuid重复 提示不能挂载</p>
+</blockquote>
+<blockquote>
+<p>3、<code>blkid</code> 查看所有磁盘的uuid</p>
+</blockquote>
+<blockquote>
+<p>4、临时解决无法挂载问题 <code>mount -o rw,nouuid 【磁盘】  【挂载点】</code> 该方式只是临时挂载，重启后失效</p>
+</blockquote>
+<blockquote>
+<p>出现该问题的可能原因是：卸载挂载磁盘的时候 由于有文件在使用，所以不能卸载，于是openstack 强制卸载等再挂载的时候由于已经存在对应的uuid，所以挂载失败。解决方案可以将影响卸载的进程kill，然后正常卸载磁盘，再将新的盘挂载到对应的挂载点，然后写入fstab，使其永久生效</p>
+</blockquote>
               
             </div>
           </div>
