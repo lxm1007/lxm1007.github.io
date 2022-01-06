@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.91.2 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="刘孝明">
 <meta name="keywords" content="go">
 <meta name="description" content="">
@@ -274,11 +274,11 @@
 <h1 id="复杂的应用">复杂的应用</h1>
 <blockquote>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">mux</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewServeMux</span>() <span style="color:#75715e">//创建多路复用器
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">mux</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewServeMux</span>() <span style="color:#75715e">//创建多路复用器
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">files</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">FileServer</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;/public&#34;</span>))<span style="color:#75715e">//创建一个可以为指定目录服务的文件处理器
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">mux</span>.<span style="color:#a6e22e">Handle</span>(<span style="color:#e6db74">&#34;/static/&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StripPrefix</span>(<span style="color:#e6db74">&#34;/static/&#34;</span>, <span style="color:#a6e22e">files</span>)) <span style="color:#75715e">//以static开头的文件 去掉/static/ 到public 下寻找对应文件 
 </span></code></pre></div><h2 id="处理器函数">处理器函数</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
 	<span style="color:#e6db74">&#34;fmt&#34;</span>
@@ -319,7 +319,7 @@
 <h2 id="链式处理中间件">链式处理（中间件）</h2>
 <blockquote>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
 	<span style="color:#e6db74">&#34;fmt&#34;</span>
@@ -345,7 +345,7 @@
 </code></pre></div><h2 id="最小惊讶原则应用的路由问题">最小惊讶原则应用的路由问题</h2>
 <blockquote>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
 	<span style="color:#e6db74">&#34;fmt&#34;</span>
@@ -373,7 +373,7 @@
 <blockquote>
 <p>httprouter</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
 	<span style="color:#e6db74">&#34;fmt&#34;</span>
@@ -409,7 +409,7 @@
 <p>需要注意的是在设置状态码之后再进行设置响应头则无法设置成功，所以响应头要在WriteHeader之后设置</p>
 </blockquote>
 <h2 id="模板解析">模板解析</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
 	<span style="color:#e6db74">&#34;html/template&#34;</span>
@@ -441,24 +441,24 @@
 <blockquote>
 <p>{{ range . }} 循环遍历数据 {{ end }} 结束</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#66d9ef">range</span> . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#66d9ef">range</span> . }}
 {{ . }}
 {{ <span style="color:#a6e22e">end</span> }}
 </code></pre></div><blockquote>
 <p>设置动作 with</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">with</span> <span style="color:#e6db74">&#34;test&#34;</span>}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">with</span> <span style="color:#e6db74">&#34;test&#34;</span>}}
 {{ . }}
 {{ <span style="color:#a6e22e">end</span> }}
 </code></pre></div><blockquote>
 <p>引入模板</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">template</span> <span style="color:#e6db74">&#34;1.html&#34;</span>}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">template</span> <span style="color:#e6db74">&#34;1.html&#34;</span>}}
 </code></pre></div><p>想要在使用引入其他的模板并且传递参数时，可以使用 {{ template &ldquo;1.html&rdquo; args }} 其中args是想要传递的数据 这样在1.html中的数据就可以进行解析</p>
 <blockquote>
 <p>定义模板</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">define</span> <span style="color:#e6db74">&#34;layout&#34;</span> }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">define</span> <span style="color:#e6db74">&#34;layout&#34;</span> }}
     <span style="color:#a6e22e">这中间是layout模板的内容</span> <span style="color:#a6e22e">一个模板文件可以定义多个不同名的模板</span>
 {{ <span style="color:#a6e22e">end</span> }}
 </code></pre></div>
@@ -516,7 +516,7 @@
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2021 刘孝明. All Rights Reserved
+    &copy; 2022 刘孝明. All Rights Reserved
   </span>
   <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2020037367号</a>
 </footer>

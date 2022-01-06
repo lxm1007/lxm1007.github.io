@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.91.2 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="刘孝明">
 <meta name="keywords" content="k8s">
 <meta name="description" content="">
@@ -268,7 +268,7 @@
 <p><code>yum list docker-ce --showduplicates | sort -r</code> 查看对应的docker可安装版本</p>
 </blockquote>
 <blockquote>
-<p><code>yum install --setopt=obsoletes=0 docker-ce-17.03.3.ce-1.el7</code> 安装指定版本（docker-ce-+&quot;指定版本&rdquo;）</p>
+<p><code>yum install --setopt=obsoletes=0 docker-ce-17.03.3.ce-1.el7</code> 安装指定版本（docker-ce-+&ldquo;指定版本&rdquo;）</p>
 </blockquote>
 <blockquote>
 <p>配置k8s软件仓库 选择容器-&gt;kubernetes <code>yum install -y kubelet kubeadm kubectl</code> 默认不加版本为仓库最新版本 不建议使用  版本的选择可以参考上面docker的安装</p>
@@ -350,6 +350,10 @@
 <p>可以在k8s初始化时指定 <code>--service-dns-domain</code> 默认为 cluster.local 当多集群时需要进行配置，该信息会存储到对应的configmap中</p>
 </blockquote>
 <h1 id="k8s中使用技巧">k8s中使用技巧</h1>
+<h2 id="查看组件状态">查看组件状态</h2>
+<blockquote>
+<p><code>kubectl get cs</code>  componentstatus</p>
+</blockquote>
 <h2 id="端口转发">端口转发</h2>
 <blockquote>
 <p>使用<code>kubectl port-forward nginx-598b589c46-ffn25 8090:80</code>将pod的容器端口80映射到宿主机8090</p>
@@ -463,7 +467,7 @@
 <p>动态创建pv：先添加一个storageClass，然后再pvc声明中个指定stroageClass的name，此时就可以自动创建pv和pvc</p>
 </blockquote>
 <blockquote>
-<p>如果想要使用预先创建的pv而不是自动创建，那么storageClass 应该设置为&rdquo;&quot;,否则就算存在满足的pv时，系统也会动态创建一个新的</p>
+<p>如果想要使用预先创建的pv而不是自动创建，那么storageClass 应该设置为&quot;&quot;,否则就算存在满足的pv时，系统也会动态创建一个新的</p>
 </blockquote>
 <h2 id="exec和shell">exec和shell</h2>
 <blockquote>
@@ -546,7 +550,7 @@
 <blockquote>
 <p>statefulset 在修改模板：比如修改镜像版本为2并且数量加1，镜像这时是不会修改之前的两个副本的镜像的，会新增一个使用新版本的镜像的pod</p>
 </blockquote>
-<h2 id="查看组件状态">查看组件状态</h2>
+<h2 id="查看组件状态-1">查看组件状态</h2>
 <blockquote>
 <p>kubectl get componentstatus</p>
 </blockquote>
@@ -680,7 +684,7 @@
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2021 刘孝明. All Rights Reserved
+    &copy; 2022 刘孝明. All Rights Reserved
   </span>
   <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2020037367号</a>
 </footer>

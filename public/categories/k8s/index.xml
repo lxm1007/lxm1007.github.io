@@ -6,11 +6,7 @@
     <description>Recent content in k8s on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Jan 2021 15:39:04 +0800</lastBuildDate>
-    
-	<atom:link href="https://lxm1007.gitee.io/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 28 Jan 2021 15:39:04 +0800</lastBuildDate><atom:link href="https://lxm1007.gitee.io/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K8s的pod驱逐问题</title>
       <link>https://lxm1007.gitee.io/2021/01/k8s%E7%9A%84pod%E9%A9%B1%E9%80%90%E9%97%AE%E9%A2%98/</link>

@@ -88,6 +88,11 @@ coverMeta: out
 >可以在k8s初始化时指定 ``` --service-dns-domain ``` 默认为 cluster.local 当多集群时需要进行配置，该信息会存储到对应的configmap中
 
 # k8s中使用技巧
+
+## 查看组件状态
+
+> ``` kubectl get cs ```  componentstatus 
+
 ## 端口转发
 > 使用```kubectl port-forward nginx-598b589c46-ffn25 8090:80```将pod的容器端口80映射到宿主机8090
 ## 显示pod指定标签 
