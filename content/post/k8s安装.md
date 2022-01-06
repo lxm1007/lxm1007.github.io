@@ -91,7 +91,7 @@ coverMeta: out
 
 ## 查看组件状态
 
-> ``` kubectl get cs ```  componentstatus 
+> ``` kubectl get cs ``` 查看组件状态 componentstatus 
 
 ## 端口转发
 > 使用```kubectl port-forward nginx-598b589c46-ffn25 8090:80```将pod的容器端口80映射到宿主机8090
