@@ -104,7 +104,7 @@ If you want more information and to understand better this code, consult [sass g
 
 ```
 ├── images
-    └── cover.jpg
+    └── cover.webp
 ```
 |File|Description|
 |---|---|
