@@ -9,7 +9,7 @@ tags:
 - curl
 keywords:
 - curl
-thumbnailImage: /img/dgkq7g.jpg
+thumbnailImage: /img/dgkq7g.webp
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
 coverImage: /img/70pomn.jpg

@@ -2,7 +2,7 @@
 
 A gorgeous responsive theme for Hugo blog framework
 
-[![Tranquilpeak](../showcase.png)](https://tranquilpeak.kakawait.com)
+[![Tranquilpeak](../showcase.webp)](https://tranquilpeak.kakawait.com)
 
 Tranquilpeak theme is compatible with Hugo `v0.53`.
 
@@ -344,7 +344,7 @@ E.g to display a shortcut to open algolia search window :
   thumbnailImage = true
   thumbnailImagePosition = "right"
   autoThumbnailImage = true
-  coverImage = "images/cover.jpg"
+  coverImage = "images/cover.webp"
   favicon = /favicon.ico
   imageGallery = true
   hierarchicalCategories = true

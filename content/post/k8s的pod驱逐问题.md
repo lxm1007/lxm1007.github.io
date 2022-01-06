@@ -9,7 +9,7 @@ tags:
 - pod
 keywords:
 - k8s
-thumbnailImage: /img/kw7q5d.jpg
+thumbnailImage: /img/kw7q5d.webp
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
 coverImage: /img/r2r51m.jpg

@@ -11,7 +11,7 @@ tags:
 keywords:
 - go
 - 并发
-thumbnailImage: /img/xlzo5o.jpg
+thumbnailImage: /img/xlzo5o.webp
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
 coverImage: /img/4gj39d.jpg
@@ -149,18 +149,18 @@ switch v.(type)
 
 > 进程的状态转换
 
-![demo](/img/status.png)
+![demo](/img/status.webp)
 
 > 内核态和用户态 ：cpu一办只工作再用户态，当需要进行系统调用（访问内核的接口），内核会将cpu由用户态调整到内核态，这时候的cpu就有权限访问内核空间，在执行完对应的函数时，内核将cpu从内核态切换成用户态
 
 > 线程的状态如下
-![demo](/img/thread.png)
+![demo](/img/thread.webp)
 
 >线程模型如下
-![demo](/img/thread_model.png)
+![demo](/img/thread_model.webp)
 
 >处理并发的建议
-![demo](/img/suggest.png)
+![demo](/img/suggest.webp)
 
 
 ## go中的M、P、G
@@ -196,7 +196,7 @@ switch v.(type)
 
 > 环形队列
 
-![demo](/img/queue-chan.png)
+![demo](/img/queue-chan.webp)
 
 ### 发送和接受通道的记忆方式
 
@@ -208,7 +208,7 @@ switch v.(type)
 
 ## 非缓冲通道
 
-![demo](/img/happen_before.png)
+![demo](/img/happen_before.webp)
 
 > 对于非缓冲通道的使用【定时器】
 ```go
@@ -228,7 +228,7 @@ switch v.(type)
 >对于非缓冲通道在打印时可能存在先出现消费后出现生产的问题，其中可能的原因是线程先调度到打印消费，鉴别的关键是看是不是先消费完等通道空闲才有生产
 
 ## api请求超时
-![demo](/img/api.png)
+![demo](/img/api.webp)
 
 ## 切片容量问题
 

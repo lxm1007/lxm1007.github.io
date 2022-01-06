@@ -9,7 +9,7 @@ tags:
 - shell
 keywords:
 - cron
-thumbnailImage: /img/g8v92d.jpg
+thumbnailImage: /img/g8v92d.webp
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
 coverImage: /img/d59jo3.jpg
@@ -82,4 +82,4 @@ coverMeta: in
 
 >"0 15 10 L * ?"               每月最后一日的上午10:15触发
 
-![cron](/img/cron.png)
+![cron](/img/cron.webp)

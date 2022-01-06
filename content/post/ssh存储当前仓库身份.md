@@ -9,10 +9,10 @@ tags:
 - 账号密码
 keywords:
 - ssh
-thumbnailImage: /img/438w60.jpg
+thumbnailImage: /img/438w60.webp
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
-coverImage: /img/13oq3v.jpg
+coverImage: /img/13oq3v.webp
 metaAlignment: center
 coverMeta: out
 ---

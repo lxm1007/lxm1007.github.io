@@ -10,7 +10,7 @@ tags:
 - 学习笔记
 keywords:
 - go
-thumbnailImage: /img/5wkvz8.png
+thumbnailImage: /img/5wkvz8.webp
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
 coverImage: /img/oxxw29.jpg
@@ -29,7 +29,7 @@ coverMeta: out
 
 # 简单的hello world 
 
-> ![demo](/img/demo.png)
+> ![demo](/img/demo.webp)
 
 # 复杂的应用 
 
@@ -170,7 +170,7 @@ func main(){
 ```
 ## form中取值的各个方法以及能获取的值
 
-![](/img/form.png)
+![](/img/form.webp)
 
 ## 关于ResponseWriter的三个方法使用
 

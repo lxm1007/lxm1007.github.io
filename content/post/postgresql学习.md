@@ -12,7 +12,7 @@ keywords:
 thumbnailImage: /img/r2e391.jpg
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
-coverImage: /img/2020.jpg
+coverImage: /img/2020.webp
 metaAlignment: center
 coverMeta: out
 ---

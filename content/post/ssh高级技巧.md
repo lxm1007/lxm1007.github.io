@@ -12,7 +12,7 @@ keywords:
 thumbnailImage: /img/ssh.jpg
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
-coverImage: /img/ssh2.jpg
+coverImage: /img/ssh2.webp
 metaAlignment: center
 coverMeta: out
 ---
