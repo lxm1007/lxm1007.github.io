@@ -292,3 +292,8 @@ coverMeta: out
 
 ## 容器终止前消息
 >在使用describe的时候，last state的message字段可以通过将信息写入/dev/termination-log实现，当然这个文件地址还也可以进行配置
+
+## command 和args结合镜像
+
+ 
+![组合](/img/commandAndargs.webp)
