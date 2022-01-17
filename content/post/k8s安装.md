@@ -1,5 +1,5 @@
 ---
-title: "K8s总结"
+title: "k8s总结"
 date: 2021-01-14T11:36:19+08:00
 categories:
 - k8s
@@ -297,3 +297,7 @@ coverMeta: out
 
  
 ![组合](/img/commandAndargs.webp)
+
+## initContainers 会根据pod重启策略进行重启 在重启时 所有init容器会重新执行 所以要保证执行结果的幂等性
+
+## rolebinding 绑定clusterRole 但是因为指定了namespace 所以该操作只是针对当前命名空间有效

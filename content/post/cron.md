@@ -1,5 +1,5 @@
 ---
-title: "Cron"
+title: "cron"
 date: 2021-03-07T10:49:10+08:00
 categories:
 - shell

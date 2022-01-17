@@ -1,5 +1,5 @@
 ---
-title: "Curl命令"
+title: "curl命令"
 date: 2021-02-20T10:10:53+08:00
 categories:
 - sell

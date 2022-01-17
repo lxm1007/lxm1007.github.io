@@ -294,6 +294,20 @@
 <blockquote>
 <p>出现该问题的可能原因是：卸载挂载磁盘的时候 由于有文件在使用，所以不能卸载，于是openstack 强制卸载等再挂载的时候由于已经存在对应的uuid，所以挂载失败。解决方案可以将影响卸载的进程kill，然后正常卸载磁盘，再将新的盘挂载到对应的挂载点，然后写入fstab，使其永久生效</p>
 </blockquote>
+<h2 id="vim编辑器的常用操作">vim编辑器的常用操作</h2>
+<blockquote>
+<p>1、<code>set nu</code> 设施行数</p>
+</blockquote>
+<blockquote>
+<p>2、 <code>set paste</code> 解决格式冲突</p>
+</blockquote>
+<blockquote>
+<p>3、<code>set ff=unix </code>使用unix换行</p>
+</blockquote>
+<h2 id="ps获取不显示行信息">ps获取不显示行信息</h2>
+<blockquote>
+<p><code> ps -C nginx --no-heading</code></p>
+</blockquote>
               
             </div>
           </div>

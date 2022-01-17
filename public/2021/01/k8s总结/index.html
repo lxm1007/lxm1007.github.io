@@ -13,8 +13,8 @@
 
 <meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="K8s总结">
-<meta name="twitter:title" content="K8s总结">
+<meta property="og:title" content="k8s总结">
+<meta name="twitter:title" content="k8s总结">
 <meta property="og:url" content="https://lxm1007.gitee.io/2021/01/k8s%E6%80%BB%E7%BB%93/">
 <meta property="twitter:url" content="https://lxm1007.gitee.io/2021/01/k8s%E6%80%BB%E7%BB%93/">
 <meta property="og:site_name" content="孝明之家">
@@ -67,7 +67,7 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/0a3c905fbe8fffbcf3de9afd490b877f?s=640">
 
 
-    <title>K8s总结</title>
+    <title>k8s总结</title>
 
     <link rel="icon" href="https://lxm1007.gitee.io/img/favicon.ico">
     
@@ -230,7 +230,7 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      K8s总结
+      k8s总结
     </h1>
   
   
@@ -634,6 +634,8 @@
 </blockquote>
 <h2 id="command-和args结合镜像">command 和args结合镜像</h2>
 <p><img src="https://lxm1007.gitee.io/img/commandAndargs.webp" alt="组合"></p>
+<h2 id="initcontainers-会根据pod重启策略进行重启-在重启时-所有init容器会重新执行-所以要保证执行结果的幂等性">initContainers 会根据pod重启策略进行重启 在重启时 所有init容器会重新执行 所以要保证执行结果的幂等性</h2>
+<h2 id="rolebinding-绑定clusterrole-但是因为指定了namespace-所以该操作只是针对当前命名空间有效">rolebinding 绑定clusterRole 但是因为指定了namespace 所以该操作只是针对当前命名空间有效</h2>
               
             </div>
           </div>
