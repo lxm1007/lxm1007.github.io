@@ -636,6 +636,10 @@
 <p><img src="https://lxm1007.gitee.io/img/commandAndargs.webp" alt="组合"></p>
 <h2 id="initcontainers-会根据pod重启策略进行重启-在重启时-所有init容器会重新执行-所以要保证执行结果的幂等性">initContainers 会根据pod重启策略进行重启 在重启时 所有init容器会重新执行 所以要保证执行结果的幂等性</h2>
 <h2 id="rolebinding-绑定clusterrole-但是因为指定了namespace-所以该操作只是针对当前命名空间有效">rolebinding 绑定clusterRole 但是因为指定了namespace 所以该操作只是针对当前命名空间有效</h2>
+<h2 id="k8s-shell-获取当前pod-deploy-等信息">k8s shell 获取当前pod deploy 等信息</h2>
+<blockquote>
+<p><code>kubectl get deploy -o go-template='{.status.replicas}'</code> 类似的命令获取到对应的信息</p>
+</blockquote>
               
             </div>
           </div>

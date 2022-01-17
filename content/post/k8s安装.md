@@ -301,3 +301,7 @@ coverMeta: out
 ## initContainers 会根据pod重启策略进行重启 在重启时 所有init容器会重新执行 所以要保证执行结果的幂等性
 
 ## rolebinding 绑定clusterRole 但是因为指定了namespace 所以该操作只是针对当前命名空间有效
+
+## k8s shell 获取当前pod deploy 等信息
+
+> ``` kubectl get deploy -o go-template='{.status.replicas}' ``` 类似的命令获取到对应的信息
