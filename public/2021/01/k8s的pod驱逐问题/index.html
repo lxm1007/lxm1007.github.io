@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.91.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.95.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="刘孝明">
 <meta name="keywords" content="k8s">
 <meta name="description" content="">
@@ -280,11 +280,11 @@
 <pre tabindex="0"><code>◎　没有设置Toleration的Pod会被立刻驱逐。
 ◎　配置了对应Toleration的Pod，如果没有为tolerationSeconds赋值，则会一直留在这一节点中。
 ◎　配置了对应Toleration的Pod且指定了tolerationSeconds值，则会在指定时间后驱逐。
-◎　Kubernetes从1.6版本开始引入一个Alpha版本的功能，即把节点故障标记为Taint（目前只针对node unreachable及node not ready，相应的NodeCondition &quot;Ready&quot;的值分别为Unknown和False）。激活TaintBasedEvictions功能后（在--feature-gates参数中加入TaintBasedEvictions=true），NodeController会自动为Node设置Taint，而在状态为Ready的Node上，之前设置过的普通驱逐逻辑将会被禁用。注意，在节点故障的情况下，为了保持现存的Pod驱逐的限速（rate-limiting）设置，系统将会以限速的模式逐步给Node设置Taint，这就能避免在一些特定情况下（比如Master暂时失联）大量的Pod被驱逐。这一功能兼容tolerationSeconds,允许Pod定义节点故障时持续多久才被逐出
+◎　Kubernetes从1.6版本开始引入一个Alpha版本的功能，即把节点故障标记为Taint（目前只针对node unreachable及node not ready，相应的NodeCondition &#34;Ready&#34;的值分别为Unknown和False）。激活TaintBasedEvictions功能后（在--feature-gates参数中加入TaintBasedEvictions=true），NodeController会自动为Node设置Taint，而在状态为Ready的Node上，之前设置过的普通驱逐逻辑将会被禁用。注意，在节点故障的情况下，为了保持现存的Pod驱逐的限速（rate-limiting）设置，系统将会以限速的模式逐步给Node设置Taint，这就能避免在一些特定情况下（比如Master暂时失联）大量的Pod被驱逐。这一功能兼容tolerationSeconds,允许Pod定义节点故障时持续多久才被逐出
 总结：想直接驱逐就不加容忍，想定时驱逐就加容忍指定时间，不想驱逐就加容忍不指定是时间
 </code></pre><h2 id="k8s中的一些问题">k8s中的一些问题</h2>
 <blockquote>
-<p>1.使用deploy 创建的pod，在没有设置容忍的时候，会默认加上<code> node.kubernetes.io/not-ready:NoExecute for 300s node.kubernetes.io/unreachable:NoExecute for 300s</code>的两个容忍，结合着上面驱逐的策略，当节点notready时，遍不会调度到该节点。如果节点上已经运行pod，并且pod没有配置对应的容忍，那么会将pod从该节点驱逐。</p>
+<p>1.使用deploy 创建的pod，在没有设置容忍的时候，会默认加上<code> node.kubernetes.io/not-ready:NoExecute for 300s node.kubernetes.io/unreachable:NoExecute for 300s</code>的两个容忍，结合着上面驱逐的策略，当节点notready时，遍不会调度到该节点。如果节点上已经运行pod，并且pod没有配置对应的容忍，那么会将pod从该节点驱逐。</p>
 </blockquote>
 <h2 id="实际中遇到的问题">实际中遇到的问题</h2>
 <blockquote>

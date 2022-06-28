@@ -15,3 +15,16 @@ min_version = 0.53
   name = "Tranquilpeak"
   homepage = "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak"
   repo = "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git"
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart =1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "fruity"
+    tabWidth = 4

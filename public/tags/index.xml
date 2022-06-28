@@ -6,6 +6,7 @@
     <description>Recent content in Tags on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+<<<<<<< HEAD
     <lastBuildDate>Tue, 28 Jun 2022 11:19:24 +0800</lastBuildDate><atom:link href="https://lxm1007.gitee.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>rust</title>
@@ -13,15 +14,41 @@
       <pubDate>Tue, 28 Jun 2022 11:19:24 +0800</pubDate>
       
       <guid>https://lxm1007.gitee.io/tags/rust/</guid>
+=======
+    <lastBuildDate>Mon, 21 Mar 2022 14:49:20 +0800</lastBuildDate><atom:link href="https://lxm1007.gitee.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>https://lxm1007.gitee.io/tags/go/</link>
+      <pubDate>Mon, 21 Mar 2022 14:49:20 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/go/</guid>
+>>>>>>> master
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>学习笔记</title>
       <link>https://lxm1007.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 28 Jun 2022 11:19:24 +0800</pubDate>
       
       <guid>https://lxm1007.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+=======
+      <title>go-zero</title>
+      <link>https://lxm1007.gitee.io/tags/go-zero/</link>
+      <pubDate>Mon, 21 Mar 2022 14:49:20 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/go-zero/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>教程</title>
+      <link>https://lxm1007.gitee.io/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Mon, 21 Mar 2022 14:49:20 +0800</pubDate>
+      
+      <guid>https://lxm1007.gitee.io/tags/%E6%95%99%E7%A8%8B/</guid>
+>>>>>>> master
       <description></description>
     </item>
     
@@ -139,15 +166,6 @@
       <pubDate>Fri, 19 Feb 2021 19:40:57 +0800</pubDate>
       
       <guid>https://lxm1007.gitee.io/tags/%E9%85%8D%E7%BD%AE/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://lxm1007.gitee.io/tags/go/</link>
-      <pubDate>Mon, 08 Feb 2021 11:15:50 +0800</pubDate>
-      
-      <guid>https://lxm1007.gitee.io/tags/go/</guid>
       <description></description>
     </item>
     
