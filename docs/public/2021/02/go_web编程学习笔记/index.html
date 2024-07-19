@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.91.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="刘孝明">
+<meta name="keywords" content="go">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go_web编程学习笔记">
+<meta name="twitter:title" content="Go_web编程学习笔记">
+<meta property="og:url" content="https://lxm1007.github.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<meta property="twitter:url" content="https://lxm1007.github.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<meta property="og:site_name" content="孝明之家">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-02-05T20:22:34">
+  
+  
+    <meta property="article:modified_time" content="2021-02-05T20:22:34">
+  
+  
+  
+    
+      <meta property="article:section" content="go">
+    
+      <meta property="article:section" content="学习笔记">
+    
+  
+  
+    
+      <meta property="article:tag" content="go">
+    
+      <meta property="article:tag" content="web">
+    
+      <meta property="article:tag" content="学习笔记">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://lxm1007.github.io/img/5wkvz8.webp">
+  <meta property="twitter:image" content="https://lxm1007.github.io/img/5wkvz8.webp">
+
+
+  <meta property="og:image" content="https://lxm1007.github.io/img/oxxw29.jpg">
+  <meta property="twitter:image" content="https://lxm1007.github.io/img/oxxw29.jpg">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/0a3c905fbe8fffbcf3de9afd490b877f?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/0a3c905fbe8fffbcf3de9afd490b877f?s=640">
+
+
+    <title>Go_web编程学习笔记</title>
+
+    <link rel="icon" href="https://lxm1007.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://lxm1007.github.io/2021/02/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+      <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/monokai.min.css" rel="stylesheet">
+      
+      <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+      
+      
+      <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+      
+      <script>hljs.initHighlightingOnLoad();</script>
+      
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://lxm1007.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://lxm1007.github.io/">孝明之家</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://lxm1007.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://lxm1007.github.io/img/avatar.webp" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://lxm1007.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://lxm1007.github.io/img/avatar.webp" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">刘孝明</h4>
+        
+          <h5 class="sidebar-profile-bio">量力而行 尽力而为</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://lxm1007.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://lxm1007.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://lxm1007.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://lxm1007.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/lxm1007" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://gitee.com/lxm1007" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-gitlab"></i>
+      
+      <span class="sidebar-button-desc">Gitee</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('/img/oxxw29.jpg')"
+       data-behavior="4">
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Go_web编程学习笔记
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-02-05T20:22:34&#43;08:00">
+        
+  February 5, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://lxm1007.github.io/categories/go">go</a>, 
+    
+      <a class="category-link" href="https://lxm1007.github.io/categories/%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0">学习笔记</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="go-web编程学习笔记">go web编程学习笔记</h1>
+<h2 id="书籍github地址httpsgithubcomsausheonggwp">【书籍github地址：https://github.com/sausheong/gwp】</h2>
+<h1 id="关于http的url-encode">关于http的url encode</h1>
+<blockquote>
+<p>所有保留字符都要进行url编码：把保留字符转化为该字符的ascii编码中对应的十六进制对应的字节值，然后在该字节前面加%，例如空格的asscii码对应的十六进制为20 则urlencode后为%20</p>
+</blockquote>
+<h1 id="简单的hello-world">简单的hello world</h1>
+<blockquote>
+<p><img src="https://lxm1007.github.io/img/demo.webp" alt="demo"></p>
+</blockquote>
+<h1 id="复杂的应用">复杂的应用</h1>
+<blockquote>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">mux</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewServeMux</span>() <span style="color:#75715e">//创建多路复用器
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">files</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">FileServer</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;/public&#34;</span>))<span style="color:#75715e">//创建一个可以为指定目录服务的文件处理器
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">mux</span>.<span style="color:#a6e22e">Handle</span>(<span style="color:#e6db74">&#34;/static/&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StripPrefix</span>(<span style="color:#e6db74">&#34;/static/&#34;</span>, <span style="color:#a6e22e">files</span>)) <span style="color:#75715e">//以static开头的文件 去掉/static/ 到public 下寻找对应文件 
+</span></code></pre></div><h2 id="处理器函数">处理器函数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">hello</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">resuest</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>)  {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintf</span>(<span style="color:#a6e22e">w</span>,<span style="color:#e6db74">&#34;hello world&#34;</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>,<span style="color:#a6e22e">request</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>){
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintf</span>(<span style="color:#a6e22e">w</span>,<span style="color:#e6db74">&#34;test&#34;</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#75715e">//go拥有一种 handleFunc 函数类型，他可以把一个带有正确函数签名的转化成一个带有方法f的Handler
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">server</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Server</span>{<span style="color:#a6e22e">Addr</span>: <span style="color:#e6db74">&#34;127.0.0.1:8080&#34;</span>}
+	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/hello&#34;</span>,<span style="color:#a6e22e">hello</span>)
+	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/test&#34;</span>,<span style="color:#a6e22e">test</span>)
+	<span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">ListenAndServe</span>()
+}
+
+<span style="color:#75715e">//如果不使用handleFunc 需要使用下面这种方法
+</span><span style="color:#75715e">//type helloHandler struct {}
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">//func (hello *helloHandler)hello(w http.ResponseWriter,request *http.Request){
+</span><span style="color:#75715e">//	fmt.Fprintf(w,&#34;hello&#34;)
+</span><span style="color:#75715e">//}
+</span><span style="color:#75715e">//type testHandler struct {}
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">//func (hello *testHandler)test(w http.ResponseWriter,request *http.Request){
+</span><span style="color:#75715e">//	fmt.Fprintf(w,&#34;test&#34;)
+</span><span style="color:#75715e">//}
+</span></code></pre></div><h2 id="最小惊讶原则">最小惊讶原则</h2>
+<blockquote>
+</blockquote>
+<p>也称最小意外原则：它指的是我们在进行设计的时候应该做那些合乎常理的事情使事物的行为始终显而易见始终如一并且合乎情理，举例：我们在一扇门旁边放置一个按钮，那么我们认为这个按钮应该和这个门有关系，比如门铃，而不是按下去之后打开走廊灯</p>
+<h2 id="链式处理中间件">链式处理（中间件）</h2>
+<blockquote>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">hello</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>,<span style="color:#a6e22e">req</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>){
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprint</span>(<span style="color:#a6e22e">w</span>,<span style="color:#e6db74">&#34;test&#34;</span>)
+}
+<span style="color:#75715e">//将hello这个handleFunc 包装，并且添加自己想要的逻辑
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">handlerFunc</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandlerFunc</span>) <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandlerFunc</span>{
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">writer</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">request</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>) {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hahahah&#34;</span>)
+		<span style="color:#a6e22e">handlerFunc</span>(<span style="color:#a6e22e">writer</span>,<span style="color:#a6e22e">request</span>)
+	}
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
+	<span style="color:#a6e22e">server</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Server</span>{<span style="color:#a6e22e">Addr</span>: <span style="color:#e6db74">&#34;127.0.0.1:8080&#34;</span>}
+	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/test&#34;</span>,<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">hello</span>))
+	<span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">ListenAndServe</span>()
+}
+</code></pre></div><h2 id="最小惊讶原则应用的路由问题">最小惊讶原则应用的路由问题</h2>
+<blockquote>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">hello1</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>,<span style="color:#a6e22e">req</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>){
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprint</span>(<span style="color:#a6e22e">w</span>,<span style="color:#e6db74">&#34;test1&#34;</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">hello2</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>,<span style="color:#a6e22e">req</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>){
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprint</span>(<span style="color:#a6e22e">w</span>,<span style="color:#e6db74">&#34;test2&#34;</span>)
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
+	<span style="color:#a6e22e">server</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Server</span>{<span style="color:#a6e22e">Addr</span>: <span style="color:#e6db74">&#34;127.0.0.1:8080&#34;</span>}
+    <span style="color:#75715e">//因为结尾没有/ 所以/test/* 这种请求将不会执行hello1 
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/test&#34;</span>,<span style="color:#a6e22e">hello1</span>)
+    <span style="color:#75715e">///test/*类型的请求则会执行hello2 
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/test/&#34;</span>,<span style="color:#a6e22e">hello2</span>)
+	<span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">ListenAndServe</span>()
+}
+</code></pre></div><h2 id="go语言开发技巧">go语言开发技巧</h2>
+<blockquote>
+<p>GO111MODULE 在mod模式下下载的包不在$GOPATH/src下 而是在pkg/mod下 所以导入第三方包的时候要注意 在编译运行等命令前加 <code>GO111MODULE=off</code> 或者将全局的开关关闭 但是不要忘了mod项目的时候打开</p>
+</blockquote>
+<blockquote>
+<p>httprouter</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;github.com/julienschmidt/httprouter&#34;</span>
+	<span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">hello</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span> ,<span style="color:#a6e22e">request</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>,<span style="color:#a6e22e">params</span> <span style="color:#a6e22e">httprouter</span>.<span style="color:#a6e22e">Params</span>)  {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintf</span>(<span style="color:#a6e22e">w</span>,<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">ByName</span>(<span style="color:#e6db74">&#34;name&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprint</span>(<span style="color:#a6e22e">w</span>,<span style="color:#e6db74">&#34;hello world&#34;</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+
+	<span style="color:#a6e22e">router</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">httprouter</span>.<span style="color:#a6e22e">New</span>()
+	<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;/test/:name&#34;</span>,<span style="color:#a6e22e">hello</span>)
+	<span style="color:#a6e22e">server</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Server</span>{<span style="color:#a6e22e">Addr</span>: <span style="color:#e6db74">&#34;127.0.0.1:8080&#34;</span>,<span style="color:#a6e22e">Handler</span>: <span style="color:#a6e22e">router</span>}
+	<span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">ListenAndServe</span>()
+}
+</code></pre></div><h2 id="form中取值的各个方法以及能获取的值">form中取值的各个方法以及能获取的值</h2>
+<p><img src="https://lxm1007.github.io/img/form.webp" alt=""></p>
+<h2 id="关于responsewriter的三个方法使用">关于ResponseWriter的三个方法使用</h2>
+<blockquote>
+<p><code>Header().set</code> 进行响应头的设置</p>
+</blockquote>
+<blockquote>
+<p><code>WriteHeader(http status code) </code> 设置响应状态码</p>
+</blockquote>
+<blockquote>
+<p><code>Write</code> 设置返回内容</p>
+</blockquote>
+<blockquote>
+<p>需要注意的是在设置状态码之后再进行设置响应头则无法设置成功，所以响应头要在WriteHeader之后设置</p>
+</blockquote>
+<h2 id="模板解析">模板解析</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;html/template&#34;</span>
+	<span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">test11</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>,<span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>){
+	<span style="color:#75715e">//files, _ := template.ParseFiles(&#34;1.html&#34;)
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//files.Execute(w,&#34;hello &#34;)
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//此时返回的是一个模板集合 则再execute时 默认是第一个 想要指定的模板execute时 使用ExecuteTemplate 指定模板名即可
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">parseFiles</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">ParseFiles</span>(<span style="color:#e6db74">&#34;1.html&#34;</span>,<span style="color:#e6db74">&#34;2.html&#34;</span>)
+	<span style="color:#a6e22e">datas</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>,<span style="color:#ae81ff">2</span>)
+	<span style="color:#a6e22e">datas</span>[<span style="color:#e6db74">&#34;name&#34;</span>] = <span style="color:#e6db74">&#34;lxm&#34;</span>
+	<span style="color:#a6e22e">datas</span>[<span style="color:#e6db74">&#34;age&#34;</span>]=<span style="color:#e6db74">&#34;12&#34;</span>
+	<span style="color:#a6e22e">parseFiles</span>.<span style="color:#a6e22e">ExecuteTemplate</span>(<span style="color:#a6e22e">w</span>,<span style="color:#e6db74">&#34;2.html&#34;</span>,<span style="color:#a6e22e">datas</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()  {
+
+	<span style="color:#a6e22e">server</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Server</span>{<span style="color:#a6e22e">Addr</span>: <span style="color:#e6db74">&#34;127.0.0.1:8080&#34;</span>}
+	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/test&#34;</span>,<span style="color:#a6e22e">test11</span>)
+    <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">ListenAndServe</span>()
+
+}
+</code></pre></div><h1 id="-语法">{{ }}语法</h1>
+<blockquote>
+<p>{{ . }} 获取所有的数据 {{ .data }} 获取所有数据中的data字段值</p>
+</blockquote>
+<blockquote>
+<p>{{ range . }} 循环遍历数据 {{ end }} 结束</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#66d9ef">range</span> . }}
+{{ . }}
+{{ <span style="color:#a6e22e">end</span> }}
+</code></pre></div><blockquote>
+<p>设置动作 with</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">with</span> <span style="color:#e6db74">&#34;test&#34;</span>}}
+{{ . }}
+{{ <span style="color:#a6e22e">end</span> }}
+</code></pre></div><blockquote>
+<p>引入模板</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">template</span> <span style="color:#e6db74">&#34;1.html&#34;</span>}}
+</code></pre></div><p>想要在使用引入其他的模板并且传递参数时，可以使用 {{ template &ldquo;1.html&rdquo; args }} 其中args是想要传递的数据 这样在1.html中的数据就可以进行解析</p>
+<blockquote>
+<p>定义模板</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">define</span> <span style="color:#e6db74">&#34;layout&#34;</span> }}
+    <span style="color:#a6e22e">这中间是layout模板的内容</span> <span style="color:#a6e22e">一个模板文件可以定义多个不同名的模板</span>
+{{ <span style="color:#a6e22e">end</span> }}
+</code></pre></div>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://lxm1007.github.io/tags/go/">go</a>
+
+  <a class="tag tag--primary tag--small" href="https://lxm1007.github.io/tags/web/">web</a>
+
+  <a class="tag tag--primary tag--small" href="https://lxm1007.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.github.io/2021/02/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" data-tooltip="Go_并发编程笔记">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.github.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" data-tooltip="Shell命令总结">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+  
+</div>
+
+            
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2024 刘孝明. All Rights Reserved
+  </span>
+  <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2020037367号</a>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.github.io/2021/02/go_%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" data-tooltip="Go_并发编程笔记">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lxm1007.github.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" data-tooltip="Shell命令总结">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://lxm1007.github.io/img/avatar.webp" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">刘孝明</h4>
+    
+      <div id="about-card-bio">量力而行 尽力而为</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        软件开发
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        BeiJing
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://lxm1007.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://lxm1007.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/lxm1007.github.io\/2021\/02\/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/';
+          
+            this.page.identifier = '\/2021\/02\/go_web%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

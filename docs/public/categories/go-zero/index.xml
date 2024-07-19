@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go-zero on 孝明之家</title>
+    <link>https://lxm1007.github.io/categories/go-zero/</link>
+    <description>Recent content in go-zero on 孝明之家</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Mar 2022 14:49:20 +0800</lastBuildDate><atom:link href="https://lxm1007.github.io/categories/go-zero/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go-zero教程</title>
+      <link>https://lxm1007.github.io/2022/03/go-zero%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Mon, 21 Mar 2022 14:49:20 +0800</pubDate>
+      
+      <guid>https://lxm1007.github.io/2022/03/go-zero%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
