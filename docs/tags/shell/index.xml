@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shell on 孝明之家</title>
-    <link>https://lxm1007.gitee.io/tags/shell/</link>
+    <link>https://lxm1007.github.io/tags/shell/</link>
     <description>Recent content in shell on 孝明之家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Mar 2021 10:49:10 +0800</lastBuildDate><atom:link href="https://lxm1007.gitee.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 10:49:10 +0800</lastBuildDate><atom:link href="https://lxm1007.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cron</title>
-      <link>https://lxm1007.gitee.io/2021/03/cron/</link>
+      <link>https://lxm1007.github.io/2021/03/cron/</link>
       <pubDate>Sun, 07 Mar 2021 10:49:10 +0800</pubDate>
       
-      <guid>https://lxm1007.gitee.io/2021/03/cron/</guid>
+      <guid>https://lxm1007.github.io/2021/03/cron/</guid>
       <description></description>
     </item>
     
     <item>
       <title>curl命令</title>
-      <link>https://lxm1007.gitee.io/2021/02/curl%E5%91%BD%E4%BB%A4/</link>
+      <link>https://lxm1007.github.io/2021/02/curl%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 20 Feb 2021 10:10:53 +0800</pubDate>
       
-      <guid>https://lxm1007.gitee.io/2021/02/curl%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://lxm1007.github.io/2021/02/curl%E5%91%BD%E4%BB%A4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shell命令总结</title>
-      <link>https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</link>
+      <link>https://lxm1007.github.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</link>
       <pubDate>Thu, 28 Jan 2021 17:52:53 +0800</pubDate>
       
-      <guid>https://lxm1007.gitee.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://lxm1007.github.io/2021/01/shell%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</guid>
       <description></description>
     </item>
     
