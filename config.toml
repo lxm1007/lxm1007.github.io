@@ -1,0 +1,27 @@
+# The URL the site will be built for
+base_url = "http://lxm1007.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+theme = "particle-zola"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+# Site settings
+description = "A blog about lorem ipsum dolor sit amet"
+
+# User settings
+username = "Lorem Ipsum"
+user_description = "Anon Developer at Lorem Ipsum Dolor"
+user_title = "Anon Developer"
+email = "my@email.com"
+twitter_username = "lorem_ipsum"
+github_username = "lorem_ipsum"
+gplus_username = "lorem_ipsum"

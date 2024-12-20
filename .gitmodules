@@ -1,0 +1,4 @@
+[submodule "themes/project-portfolio"]
+	path = themes/project-portfolio
+	url = git@github.com:awinterstein/zola-theme-project-portfolio.git
+	branch = main
