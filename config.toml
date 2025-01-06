@@ -19,9 +19,8 @@ description = "A blog about lorem ipsum dolor sit amet"
 
 # User settings
 username = "刘孝明"
-user_description = "Anon Developer at Lorem Ipsum Dolor"
+user_description = "java、golang、rust"
 user_title = "精神时间屋"
 email = "15853261424@163.com"
-twitter_username = "lorem_ipsum"
-github_username = "lorem_ipsum"
-gplus_username = "lorem_ipsum"
+github_username = "lxm1007"
+gplus_username = "liuxioaming1007@gmail.com"
